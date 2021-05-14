@@ -44,7 +44,7 @@
       "Rarity": "Magic",
       "Products": [
         { "Item": "DustMagic",    "Amount": 1 },
-        { "Item": "ReagentMagic", "Amount": 1 }
+        { "Item": "EssenceMagic", "Amount": 1 }
       ]
     },
     {
@@ -53,7 +53,7 @@
       "Rarity": "Rare",
       "Products": [
         { "Item": "DustRare",    "Amount": 1 },
-        { "Item": "ReagentRare", "Amount": 1 }
+        { "Item": "EssenceRare", "Amount": 1 }
       ]
     },
     {
@@ -62,7 +62,7 @@
       "Rarity": "Epic",
       "Products": [
         { "Item": "DustEpic",    "Amount": 1 },
-        { "Item": "ReagentEpic", "Amount": 1 }
+        { "Item": "EssenceEpic", "Amount": 1 }
       ]
     },
     {
@@ -71,7 +71,7 @@
       "Rarity": "Legendary",
       "Products": [
         { "Item": "DustLegendary",    "Amount": 1 },
-        { "Item": "ReagentLegendary", "Amount": 1 }
+        { "Item": "EssenceLegendary", "Amount": 1 }
       ]
     },
     {
@@ -123,8 +123,7 @@
       "ItemNames" : [ "$item_cryptkey" ],
       "Products" : [
         { "Item": "DustRare",    "Amount": 1 },
-        { "Item": "EssenceRare", "Amount": 1 },
-        { "Item": "ReagentRare", "Amount": 1 }
+        { "Item": "EssenceRare", "Amount": 1 }
       ]
     }
   ],
@@ -175,7 +174,7 @@
       "Cost": [
         { "Item": "RunestoneMagic", "Amount": 1 },
         { "Item": "DustMagic",      "Amount": 5 },
-        { "Item": "ReagentMagic",   "Amount": 5 }
+        { "Item": "EssenceMagic",   "Amount": 5 }
       ]
     },
     {
@@ -184,7 +183,7 @@
       "Cost": [
         { "Item": "RunestoneRare", "Amount": 1 },
         { "Item": "DustRare",      "Amount": 5 },
-        { "Item": "ReagentRare",   "Amount": 5 }
+        { "Item": "EssenceRare",   "Amount": 5 }
       ]
     },
     {
@@ -193,7 +192,7 @@
       "Cost": [
         { "Item": "RunestoneEpic", "Amount": 1 },
         { "Item": "DustEpic",      "Amount": 5 },
-        { "Item": "ReagentEpic",   "Amount": 5 }
+        { "Item": "EssenceEpic",   "Amount": 5 }
       ]
     },
     {
@@ -202,7 +201,7 @@
       "Cost": [
         { "Item": "RunestoneLegendary", "Amount": 1 },
         { "Item": "DustLegendary",      "Amount": 5 },
-        { "Item": "ReagentLegendary",   "Amount": 5 }
+        { "Item": "EssenceLegendary",   "Amount": 5 }
       ]
     }
   ],
@@ -253,7 +252,7 @@
       "Cost": [
         { "Item": "ShardMagic",   "Amount": 1 },
         { "Item": "DustMagic",    "Amount": 1 },
-        { "Item": "ReagentMagic", "Amount": 1 }
+        { "Item": "EssenceMagic", "Amount": 1 }
       ]
     },
     {
@@ -262,7 +261,7 @@
       "Cost": [
         { "Item": "ShardRare",   "Amount": 1 },
         { "Item": "DustRare",    "Amount": 1 },
-        { "Item": "ReagentRare", "Amount": 1 }
+        { "Item": "EssenceRare", "Amount": 1 }
       ]
     },
     {
@@ -271,7 +270,7 @@
       "Cost": [
         { "Item": "ShardEpic",   "Amount": 1 },
         { "Item": "DustEpic",    "Amount": 1 },
-        { "Item": "ReagentEpic", "Amount": 1 }
+        { "Item": "EssenceEpic", "Amount": 1 }
       ]
     },
     {
@@ -280,7 +279,7 @@
       "Cost": [
         { "Item": "ShardLegendary",   "Amount": 1 },
         { "Item": "DustLegendary",    "Amount": 1 },
-        { "Item": "ReagentLegendary", "Amount": 1 }
+        { "Item": "EssenceLegendary", "Amount": 1 }
       ]
     }
   ]

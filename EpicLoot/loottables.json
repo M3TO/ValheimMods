@@ -44,32 +44,28 @@
       "Name": "Tier0Mats",
       "Loot": [
         { "Item": "DustMagic"    },
-        { "Item": "EssenceMagic" },
-        { "Item": "ReagentMagic" }
+        { "Item": "EssenceMagic" }
       ]
     },
     {
       "Name": "Tier1Mats",
       "Loot": [
         { "Item": "DustRare"    },
-        { "Item": "EssenceRare" },
-        { "Item": "ReagentRare" }
+        { "Item": "EssenceRare" }
       ]
     },
     {
       "Name": "Tier2Mats",
       "Loot": [
         { "Item": "DustEpic"    },
-        { "Item": "EssenceEpic" },
-        { "Item": "ReagentEpic" }
+        { "Item": "EssenceEpic" }
       ]
     },
     {
       "Name": "Tier3Mats",
       "Loot": [
         { "Item": "DustLegendary"    },
-        { "Item": "EssenceLegendary" },
-        { "Item": "ReagentLegendary" }
+        { "Item": "EssenceLegendary" }
       ]
     },
     {
@@ -261,8 +257,8 @@
     {
       "Name": "Tier3Shields",
       "Loot": [
-        { "Item": "ShieldBanded" },
-        { "Item": "ShieldIronTower" }
+        { "Item": "ShieldBanded" }
+        //{ "Item": "ShieldIronTower" }
       ]
     },
     {
@@ -303,8 +299,8 @@
     {
       "Name": "Tier4Shields",
       "Loot": [
-        { "Item": "ShieldSilver" },
-        { "Item": "ShieldSerpentscale" }
+        { "Item": "ShieldSilver" }
+        //{ "Item": "ShieldSerpentscale" }
       ]
     },
     {
@@ -342,8 +338,8 @@
     {
       "Name": "Tier5Shields",
       "Loot": [
-        { "Item": "ShieldBlackmetal" },
-        { "Item": "ShieldBlackmetalTower" }
+        { "Item": "ShieldBlackmetal" }
+        //{ "Item": "ShieldBlackmetalTower" }
       ]
     },
     {

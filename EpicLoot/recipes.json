@@ -92,35 +92,35 @@
       ]
     },
     ///////////////////////////////////////////////////////////////////////////////////////////////
-    {
-      "name": "Recipe_ReagentRareUpgrade",
-      "item": "ReagentRare",
-      "amount": 1,
-      "craftingStation": "",
-      "resources": [
-        { "item": "ReagentMagic", "amount": 5 }
-      ]
-    },
-    {
-      "name": "Recipe_ReagentEpicUpgrade",
-      "item": "ReagentEpic",
-      "amount": 1,
-      "craftingStation": "",
-      "resources": [
-        { "item": "ReagentRare", "amount": 5  },
-        { "item": "Coins",       "amount": 5 }
-      ]
-    },
-    {
-      "name": "Recipe_ReagentLegendaryUpgrade",
-      "item": "ReagentLegendary",
-      "amount": 1,
-      "craftingStation": "",
-      "resources": [
-        { "item": "ReagentEpic", "amount": 5  },
-        { "item": "Coins",       "amount": 10 }
-      ]
-    },
+    //{
+    //  "name": "Recipe_ReagentRareUpgrade",
+    //  "item": "ReagentRare",
+    //  "amount": 1,
+    //  "craftingStation": "",
+    //  "resources": [
+    //    { "item": "ReagentMagic", "amount": 5 }
+    //  ]
+    //},
+    //{
+    //  "name": "Recipe_ReagentEpicUpgrade",
+    //  "item": "ReagentEpic",
+    //  "amount": 1,
+    //  "craftingStation": "",
+    //  "resources": [
+    //    { "item": "ReagentRare", "amount": 5  },
+    //    { "item": "Coins",       "amount": 5 }
+    //  ]
+    //},
+    //{
+    //  "name": "Recipe_ReagentLegendaryUpgrade",
+    //  "item": "ReagentLegendary",
+    //  "amount": 1,
+    //  "craftingStation": "",
+    //  "resources": [
+    //    { "item": "ReagentEpic", "amount": 5  },
+    //    { "item": "Coins",       "amount": 10 }
+    //  ]
+    //},
     ///////////////////////////////////////////////////////////////////////////////////////////////
     {
       "name": "Recipe_EssenceRareUpgrade",
@@ -202,15 +202,15 @@
         { "item": "ShardMagic", "amount": 2 }
       ]
     },
-    {
-      "name": "Recipe_MagicShardToReagent_Conversion",
-      "item": "ReagentMagic",
-      "amount": 1,
-      "craftingStation": "",
-      "resources": [
-        { "item": "ShardMagic", "amount": 2 }
-      ]
-    },
+    //{
+    //  "name": "Recipe_MagicShardToReagent_Conversion",
+    //  "item": "ReagentMagic",
+    //  "amount": 1,
+    //  "craftingStation": "",
+    //  "resources": [
+    //    { "item": "ShardMagic", "amount": 2 }
+    //  ]
+    //},
     ///////////////////////////////////////////////////////////////////////////////////////////////
     {
       "name": "Recipe_RareShardToDust_Conversion",
@@ -232,16 +232,16 @@
         { "item": "Coins",     "amount": 2 }
       ]
     },
-    {
-      "name": "Recipe_RareShardToReagent_Conversion",
-      "item": "ReagentRare",
-      "amount": 1,
-      "craftingStation": "",
-      "resources": [
-        { "item": "ShardRare", "amount": 2 },
-        { "item": "Coins",     "amount": 2 }
-      ]
-    },
+    //{
+    //  "name": "Recipe_RareShardToReagent_Conversion",
+    //  "item": "ReagentRare",
+    //  "amount": 1,
+    //  "craftingStation": "",
+    //  "resources": [
+    //    { "item": "ShardRare", "amount": 2 },
+    //    { "item": "Coins",     "amount": 2 }
+    //  ]
+    //},
     ///////////////////////////////////////////////////////////////////////////////////////////////
     {
       "name": "Recipe_EpicShardToDust_Conversion",
@@ -263,16 +263,16 @@
         { "item": "Coins",     "amount": 3 }
       ]
     },
-    {
-      "name": "Recipe_EpicShardToReagent_Conversion",
-      "item": "ReagentEpic",
-      "amount": 1,
-      "craftingStation": "",
-      "resources": [
-        { "item": "ShardEpic", "amount": 2 },
-        { "item": "Coins",     "amount": 3 }
-      ]
-    },
+    //{
+    //  "name": "Recipe_EpicShardToReagent_Conversion",
+    //  "item": "ReagentEpic",
+    //  "amount": 1,
+    //  "craftingStation": "",
+    //  "resources": [
+    //    { "item": "ShardEpic", "amount": 2 },
+    //    { "item": "Coins",     "amount": 3 }
+    //  ]
+    //},
     ///////////////////////////////////////////////////////////////////////////////////////////////
     {
       "name": "Recipe_LegendaryShardToDust_Conversion",
@@ -294,16 +294,16 @@
         { "item": "Coins",          "amount": 4 }
       ]
     },
-    {
-      "name": "Recipe_LegendaryShardToReagent_Conversion",
-      "item": "ReagentLegendary",
-      "amount": 1,
-      "craftingStation": "",
-      "resources": [
-        { "item": "ShardLegendary", "amount": 2 },
-        { "item": "Coins",          "amount": 4 }
-      ]
-    },
+    //{
+    //  "name": "Recipe_LegendaryShardToReagent_Conversion",
+    //  "item": "ReagentLegendary",
+    //  "amount": 1,
+    //  "craftingStation": "",
+    //  "resources": [
+    //    { "item": "ShardLegendary", "amount": 2 },
+    //    { "item": "Coins",          "amount": 4 }
+    //  ]
+    //},
 
     // Junk Recipes
     ///////////////////////////////////////////////////////////////////////////////////////////////
