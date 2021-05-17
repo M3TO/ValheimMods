@@ -29,6 +29,75 @@
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   "ItemSets": [
 
+    // Terraheim
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    {
+      "Name": "Tier1WeaponsTH",
+      "Loot": [
+        { "Item": "ThrowingAxeFlint" },
+        { "Item": "JavelinFlint" }
+      ]
+    },
+    {
+      "Name": "Tier2WeaponsTH",
+      "Loot": [
+        { "Item": "BattleaxeBronzeTerraheim" }
+        //{ "Item": "ThrowingAxeBronze" }
+      ]
+    },
+    {
+      "Name": "Tier3WeaponsTH",
+      "Loot": [
+        { "Item": "GreatswordIron" },
+        { "Item": "KnifeIron" },
+        { "Item": "GreatswordChitinTH" }
+        //{ "Item": "ThrowingAxeIron" }
+      ]
+    },
+    {
+      "Name": "Tier4WeaponsTH",
+      "Loot": [
+        { "Item": "AtgeirSilver" },
+        { "Item": "SwordFolcbrand" },
+        { "Item": "AxeForstasca" },
+        { "Item": "BattleaxeSilver" },
+        { "Item": "ShieldSilverDagger"}
+        //{ "Item": "ThrowingAxeSilver" }
+      ]
+    },
+    {
+      "Name": "Tier5WeaponsTH",
+      "Loot": [
+        { "Item": "GreatswordBlackmetal" },
+        { "Item": "SpearBlackmetal" },
+        { "Item": "BattleaxeBlackmetal" },
+        { "Item": "GreataxeBlackmetal" },
+        { "Item": "BowBlackmetalTH" }
+        //{ "Item": "ThrowingAxeBlackmetal" }
+      ]
+    },
+    {
+      "Name": "Tier5WeaponsTH",
+      "Loot": [
+        { "Item": "PickaxeBlackmetal" }
+      ]
+    },
+    {
+      "Name": "Tier6WeaponsTH",
+      "Loot": [
+        { "Item": "SwordFireTH" },
+        { "Item": "MaceFireTH" },
+        { "Item": "KnifeFireTH" },
+        { "Item": "GreatswordFireTH" },
+        { "Item": "SledgeFireTH" },
+        { "Item": "AtgeirFireTH" },
+        { "Item": "SpearFireTH" },
+        { "Item": "BattleaxeFireTH" },
+        { "Item": "BowFireTH" }
+        //{ "Item": "ThrowingAxeFire" }
+      ]
+    },
+
     // Enchanting Mats
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     {
@@ -151,7 +220,8 @@
         { "Item": "AxeFlint" },
         { "Item": "SpearFlint" },
         { "Item": "KnifeFlint" },
-        { "Item": "Bow" }
+        { "Item": "Bow" },
+        { "Item": "Tier1WeaponsTH" }
       ]
     },
     {
@@ -199,7 +269,8 @@
         { "Item": "SpearBronze" },
         { "Item": "BowFineWood" },
         { "Item": "KnifeChitin" },
-        { "Item": "SpearChitin" }
+        { "Item": "SpearChitin" },
+        { "Item": "Tier2WeaponsTH" }
       ]
     },
     {
@@ -243,7 +314,8 @@
         { "Item": "SledgeIron" },
         { "Item": "MaceIron" },
         { "Item": "AtgeirIron" },
-        { "Item": "SpearElderbark" }
+        { "Item": "SpearElderbark" },
+        { "Item": "Tier3WeaponsTH" }
       ]
     },
     {
@@ -283,7 +355,8 @@
         { "Item": "SwordSilver" },
         { "Item": "SpearWolfFang" },
         { "Item": "MaceSilver" },
-        { "Item": "BowDraugrFang" }
+        { "Item": "BowDraugrFang" },
+        { "Item": "Tier4WeaponsTH" }
       ]
     },
     {
@@ -320,8 +393,8 @@
         { "Item": "AtgeirBlackmetal" },
         { "Item": "AxeBlackMetal" },
         { "Item": "SwordBlackmetal" },
-        { "Item": "MaceNeedle" }
-
+        { "Item": "MaceNeedle" },
+        { "Item": "Tier5WeaponsTH" }
       ]
     },
     {
@@ -343,11 +416,18 @@
       ]
     },
     {
+      "Name": "Tier5Tools",
+      "Loot": [
+        { "Item": "Tier5ToolsTH" }
+      ]
+    },
+    {
       "Name": "Tier5Everything",
       "Loot": [
         { "Item": "Tier5Weapons", "Weight": 3 },
         { "Item": "Tier5Armor", "Weight": 3 },
-        { "Item": "Tier5Shields", "Weight": 1  }
+        { "Item": "Tier5Shields", "Weight": 1  },
+        { "Item": "Tier5Tools", "Weight": 1  }
       ]
     }
   ],
@@ -1163,6 +1243,36 @@
       "Object": "Goblin",
       "RefObject": "Tier5Mob"
     },
+    // Drowned Soul (Drowned)
+    ////////////////////////////////////////////////////////////////////////////////////
+    {
+      "Object": "RRRM_Drowned",
+      "RefObject": "Tier5Mob"
+    },
+    // Storm-herald Wyrven (Storm)
+    ////////////////////////////////////////////////////////////////////////////////////
+    {
+      "Object": "RRRM_Storm",
+      "RefObject": "Tier5Mob"
+    },
+    // Svartalfr Warrior (Elv1)
+    ////////////////////////////////////////////////////////////////////////////////////
+    {
+      "Object": "RRRM_Elv1",
+      "RefObject": "Tier5Mob"
+    },
+    // Svartalfr Archer (Elv2)
+    ////////////////////////////////////////////////////////////////////////////////////
+    {
+      "Object": "RRRM_Elv2",
+      "RefObject": "Tier5Mob"
+    },
+    // Duskseeker Svartalfr (Elv3)
+    ////////////////////////////////////////////////////////////////////////////////////
+    {
+      "Object": "RRRM_Elv3",
+      "RefObject": "Tier5Mob"
+    },
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // Tier 6 Mobs (Fuling Berserker, Fuling Shaman)
@@ -1180,7 +1290,48 @@
       "Object": "GoblinShaman",
       "RefObject": "Tier6Mob"
     },
-
+    // Burned Bones (Burned)
+    ////////////////////////////////////////////////////////////////////////////////////
+    {
+      "Object": "RRRM_Burned",
+      "RefObject": "Tier6Mob"
+    },
+    // Damned One (Damned)
+    ////////////////////////////////////////////////////////////////////////////////////
+    {
+      "Object": "RRRM_Damned",
+      "RefObject": "Tier6Mob"
+    },
+    // Fire-breathing Drake (FireHatchling)
+    ////////////////////////////////////////////////////////////////////////////////////
+    {
+      "Object": "RRRM_FireHatchling",
+      "RefObject": "Tier6Mob"
+    },
+    // Ash-eater Neck (FireNeck)
+    ////////////////////////////////////////////////////////////////////////////////////
+    {
+      "Object": "RRRM_FireNeck",
+      "RefObject": "Tier6Mob"
+    },
+    // Elder Surtling (OldSurtling)
+    ////////////////////////////////////////////////////////////////////////////////////
+    {
+      "Object": "RRRM_OldSurtling",
+      "RefObject": "Tier6Mob"
+    },
+    // Ash-eater Tadpole (SmallFireNeck)
+    ////////////////////////////////////////////////////////////////////////////////////
+    {
+      "Object": "RRRM_SmallFireNeck",
+      "RefObject": "Tier6Mob"
+    },
+    // Subjugated Fuling (SmallFireNeck)
+    ////////////////////////////////////////////////////////////////////////////////////
+    {
+      "Object": "RRRM_GoblinSlave",
+      "RefObject": "Tier6Mob"
+    },
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // BOSSES
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
