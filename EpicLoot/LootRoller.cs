@@ -370,10 +370,21 @@ namespace EpicLoot
                     legendary = _weightedLegendaryTable.Roll();
                 }
 
+                if (legendary.IsSetItem)
+                {
+                    var setID = UniqueLegendaryHelper.GetSetForLegendaryItem(legendary);
+                    magicItem.SetID = setID;
+                }
+
                 if (!UniqueLegendaryHelper.IsGenericLegendary(legendary))
                 {
                     magicItem.LegendaryID = legendary.ID;
                     magicItem.DisplayName = legendary.Name;
+
+                    if (legendary.GuaranteedEffectCount > 0)
+                    {
+                        effectCount = legendary.GuaranteedEffectCount;
+                    }
 
                     foreach (var guaranteedMagicEffect in legendary.GuaranteedMagicEffects)
                     {
@@ -463,11 +474,7 @@ namespace EpicLoot
                 }
             }
 
-            return new MagicItemEffect()
-            {
-                EffectType = effectDef.Type,
-                EffectValue = value
-            };
+            return new MagicItemEffect(effectDef.Type, value);
         }
 
         public static List<MagicItemEffect> RollEffects(List<MagicItemEffectDefinition> availableEffects, ItemRarity itemRarity, int count, bool removeOnSelect = true)
@@ -678,7 +685,7 @@ namespace EpicLoot
             if (players.Count > 0)
             {
                 var totalLuckFactor = players
-                    .Select(x => x.GetTotalMagicEffectValueOnEquipment(MagicEffectType.Luck, 0.01f))
+                    .Select(x => x.GetTotalActiveMagicEffectValue(MagicEffectType.Luck, 0.01f))
                     .DefaultIfEmpty(0)
                     .Sum();
                 luckFactor += totalLuckFactor;

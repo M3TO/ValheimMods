@@ -7,6 +7,7 @@ using System.Text;
 using BepInEx;
 using BepInEx.Configuration;
 using Common;
+using EpicLoot.Abilities;
 using EpicLoot.Adventure;
 using EpicLoot.Crafting;
 using EpicLoot.GatedItemType;
@@ -55,6 +56,7 @@ namespace EpicLoot
         public AudioClip AbandonBountySFX;
         public AudioClip DoubleJumpSFX;
         public GameObject DebugTextPrefab;
+        public GameObject AbilityBar;
     }
 
     public class PieceDef
@@ -71,9 +73,9 @@ namespace EpicLoot
     {
         public const string PluginId = "randyknapp.mods.epicloot";
         public const string DisplayName = "Epic Loot";
-        public const string Version = "0.7.10";
+        public const string Version = "0.8.0";
 
-        private readonly ConfigSync _configSync = new ConfigSync(PluginId) { DisplayName = DisplayName, CurrentVersion = Version, MinimumRequiredVersion = "0.7.10" };
+        private readonly ConfigSync _configSync = new ConfigSync(PluginId) { DisplayName = DisplayName, CurrentVersion = Version, MinimumRequiredVersion = "0.8.0" };
 
         private static ConfigEntry<string> _setItemColor;
         private static ConfigEntry<string> _magicRarityColor;
@@ -96,9 +98,15 @@ namespace EpicLoot
         private static ConfigEntry<GatedItemTypeMode> _gatedItemTypeModeConfig;
         private static ConfigEntry<BossDropMode> _bossTrophyDropMode;
         private static ConfigEntry<float> _bossTrophyDropPlayerRange;
+        private static ConfigEntry<int> _andvaranautRange;
         public static ConfigEntry<bool> ShowEquippedAndHotbarItemsInSacrificeTab;
         private static ConfigEntry<bool> _adventureModeEnabled;
         private static ConfigEntry<bool> _serverConfigLocked;
+        public static readonly ConfigEntry<string>[] AbilityKeyCodes = new ConfigEntry<string>[AbilityController.AbilitySlotCount];
+        public static ConfigEntry<TextAnchor> AbilityBarAnchor;
+        public static ConfigEntry<Vector2> AbilityBarPosition;
+        public static ConfigEntry<TextAnchor> AbilityBarLayoutAlignment;
+        public static ConfigEntry<float> AbilityBarIconSpacing;
 
         public static readonly List<ItemDrop.ItemData.ItemType> AllowedMagicItemTypes = new List<ItemDrop.ItemData.ItemType>
         {
@@ -134,15 +142,17 @@ namespace EpicLoot
         public static readonly List<GameObject> RegisteredItemPrefabs = new List<GameObject>();
         public static readonly Dictionary<GameObject, PieceDef> RegisteredPieces = new Dictionary<GameObject, PieceDef>();
         private static readonly Dictionary<string, Action<ItemDrop>> _customItemSetupActions = new Dictionary<string, Action<ItemDrop>>();
+        private static readonly Dictionary<string, Object> _assetCache = new Dictionary<string, Object>();
         public static bool AlwaysDropCheat = false;
         public const Minimap.PinType BountyPinType = (Minimap.PinType) 800;
         public const Minimap.PinType TreasureMapPinType = (Minimap.PinType) 801;
 
+        public static event Action AbilitiesInitialized;
         public static event Action LootTableLoaded;
 
         private static EpicLoot _instance;
         private Harmony _harmony;
-        private float _worldLuckFactor = 0;
+        private float _worldLuckFactor;
 
         [UsedImplicitly]
         private void Awake()
@@ -172,11 +182,22 @@ namespace EpicLoot
             _bossTrophyDropMode = SyncedConfig("Balance", "Boss Trophy Drop Mode", BossDropMode.OnePerPlayerNearBoss, "Sets bosses to drop a number of trophies equal to the number of players, similar to the way Wishbone works in vanilla. Optionally set it to only include players within a certain distance, use 'Boss Trophy Drop Player Range' to set the range.");
             _bossTrophyDropPlayerRange = SyncedConfig("Balance", "Boss Trophy Drop Player Range", 100.0f, "Sets the range that bosses check when dropping multiple trophies using the OnePerPlayerNearBoss drop mode.");
             _adventureModeEnabled = SyncedConfig("Balance", "Adventure Mode Enabled", true, "Set to true to enable all the adventure mode features: secret stash, gambling, treasure maps, and bounties. Set to false to disable. This will not actually remove active treasure maps or bounties from your save.");
+            _andvaranautRange = SyncedConfig("Balance", "Andvaranaut Range", 20, "Sets the range that Andvaranaut will locate a treasure chest.");
             _serverConfigLocked = SyncedConfig("Config Sync", "Lock Config", false, new ConfigDescription("[Server Only] The configuration is locked and may not be changed by clients once it has been synced from the server. Only valid for server config, will have no effect on clients."));
+
+            AbilityKeyCodes[0] = Config.Bind("Abilities", "Ability Hotkey 1", "g", "Hotkey for Ability Slot 1.");
+            AbilityKeyCodes[1] = Config.Bind("Abilities", "Ability Hotkey 2", "h", "Hotkey for Ability Slot 2.");
+            AbilityKeyCodes[2] = Config.Bind("Abilities", "Ability Hotkey 3", "j", "Hotkey for Ability Slot 3.");
+            AbilityBarAnchor = Config.Bind("Abilities", "Ability Bar Anchor", TextAnchor.LowerCenter, "The point on the HUD to anchor the ability bar. Changing this also changes the pivot of the ability bar to that corner. For reference: the ability bar size is 208 by 64.");
+            AbilityBarPosition = Config.Bind("Abilities", "Ability Bar Position", new Vector2(0, 50), "The position offset from the Ability Bar Anchor at which to place the ability bar.");
+            AbilityBarLayoutAlignment = Config.Bind("Abilities", "Ability Bar Layout Alignment", TextAnchor.MiddleCenter, "The Ability Bar is a Horizontal Layout Group. This value indicates how the elements inside are aligned. Choices with 'Center' in them will keep the items centered on the bar, even if there are fewer than the maximum allowed. 'Left' will be left aligned, and similar for 'Right'.");
+            AbilityBarIconSpacing = Config.Bind("Abilities", "Ability Bar Icon Spacing", 8.0f, "The number of units between the icons on the ability bar.");
+
             _configSync.AddLockingConfigEntry(_serverConfigLocked);
 
             LoadTranslations();
             InitializeConfig();
+            InitializeAbilities();
             PrintInfo();
             //GenerateTranslations();
 
@@ -229,6 +250,13 @@ namespace EpicLoot
             LoadJsonFile<ItemNameConfig>("itemnames.json", MagicItemNames.Initialize);
             LoadJsonFile<AdventureDataConfig>("adventuredata.json", AdventureDataManager.Initialize);
             LoadJsonFile<LegendaryItemConfig>("legendaries.json", UniqueLegendaryHelper.Initialize);
+            LoadJsonFile<AbilityConfig>("abilities.json", AbilityDefinitions.Initialize);
+        }
+
+        private void InitializeAbilities()
+        {
+            MagicEffectType.Initialize();
+            AbilitiesInitialized?.Invoke();
         }
 
         public static void Log(string message)
@@ -309,6 +337,7 @@ namespace EpicLoot
             Assets.AbandonBountySFX = assetBundle.LoadAsset<AudioClip>("AbandonBounty");
             Assets.DoubleJumpSFX = assetBundle.LoadAsset<AudioClip>("DoubleJump");
             Assets.DebugTextPrefab = assetBundle.LoadAsset<GameObject>("DebugText");
+            Assets.AbilityBar = assetBundle.LoadAsset<GameObject>("AbilityBar");
 
             LoadCraftingMaterialAssets(assetBundle, "Runestone");
 
@@ -356,7 +385,14 @@ namespace EpicLoot
         {
             try
             {
-                return Assets.AssetBundle.LoadAsset<T>(assetName);
+                if (_assetCache.ContainsKey(assetName))
+                {
+                    return (T)_assetCache[assetName];
+                }
+
+                var asset = Assets.AssetBundle.LoadAsset<T>(assetName);
+                _assetCache.Add(assetName, asset);
+                return asset;
             }
             catch (Exception e)
             {
@@ -716,7 +752,7 @@ namespace EpicLoot
                 Rarity = ItemRarity.Epic,
                 TypeNameOverride = "$mod_epicloot_item_andvaranaut_type"
             };
-            magicItem.Effects.Add(new MagicItemEffect() { EffectType = MagicEffectType.Andvaranaut });
+            magicItem.Effects.Add(new MagicItemEffect(MagicEffectType.Andvaranaut));
 
             prefab.m_itemData = new ExtendedItemData(prefab.m_itemData);
             prefab.m_itemData.Extended().ReplaceComponent<MagicItemComponent>().MagicItem = magicItem;
@@ -1287,6 +1323,11 @@ namespace EpicLoot
         public static float GetBossTrophyDropPlayerRange()
         {
             return _bossTrophyDropPlayerRange.Value;
+        }
+
+        public static int GetAndvaranautRange()
+        {
+          return _andvaranautRange.Value;
         }
 
         public static bool IsAdventureModeEnabled()
