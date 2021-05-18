@@ -77,7 +77,7 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="..\Libs\CreatureLevelControlAPI.dll">
-        <Link>CreatureLevelControlAPI.dll</Link>
+      <Link>CreatureLevelControlAPI.dll</Link>
     </Resource>
   </ItemGroup>
   <ItemGroup>
@@ -105,14 +105,9 @@
   </ItemGroup>
   <Import Project="..\Common\Common.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-<<<<<<< HEAD
-  <PropertyGroup>
-    <PostBuildEvent>xcopy "$(TargetDir)$(TargetFileName)" "C:\Program Files (x86)\Steam\steamapps\common\Valheim\BepInEx\plugins\" /q /y /i</PostBuildEvent>
-  </PropertyGroup>
-=======
-    <Target Name="Copy" AfterTargets="ILRepack">
-        <Exec Command="xcopy &quot;$(TargetDir)$(TargetFileName)&quot; &quot;C:\Program Files (x86)\Steam\steamapps\common\Valheim\BepInEx\plugins\$(ProjectName)\&quot; /q /y /i" />
-    </Target>
+  <Target Name="Copy" AfterTargets="ILRepack">
+    <Exec Command="xcopy &quot;$(TargetDir)$(TargetFileName)&quot; &quot;C:\Program Files (x86)\Steam\steamapps\common\Valheim\BepInEx\plugins\$(ProjectName)\&quot; /q /y /i" />
+  </Target>
   <Import Project="..\packages\ILRepack.Lib.MSBuild.Task.2.0.18.2\build\ILRepack.Lib.MSBuild.Task.targets" Condition="Exists('..\packages\ILRepack.Lib.MSBuild.Task.2.0.18.2\build\ILRepack.Lib.MSBuild.Task.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
@@ -120,5 +115,4 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\ILRepack.Lib.MSBuild.Task.2.0.18.2\build\ILRepack.Lib.MSBuild.Task.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\ILRepack.Lib.MSBuild.Task.2.0.18.2\build\ILRepack.Lib.MSBuild.Task.targets'))" />
   </Target>
->>>>>>> main
 </Project>

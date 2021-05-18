@@ -1059,6 +1059,239 @@
     },
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // Supplemental Mobs
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+      "Object": "RRRN_Thief",
+      "RefObject": "Tier0Mob"
+    },
+    {
+      "Object": "RRR_Hostile_T1",
+      "RefObject": "Tier1Mob"
+    },
+    {
+      "Object": "RRR_Hostile_T2",
+      "RefObject": "Tier2Mob"
+    },
+    {
+      "Object": "RRRN_UpirGrim",
+      "RefObject": "Tier2Mob"
+    },
+    {
+      "Object": "RRRN_ZaineEvilian",
+      "RefObject": "Tier2Mob"
+    },
+    {
+      "Object": "RRRN_Brigand",
+      "RefObject": "Tier2Mob"
+    },
+    {
+      "Object": "RRR_GDThornweaver",
+      "RefObject": "Tier2Mob"
+    },
+    {
+      "Object": "RRR_GhostVengeful",
+      "RefObject": "Tier2Mob"
+    },
+    {
+      "Object": "RRR_TrollTosser",
+      "RefObject": "Tier2Mob"
+    },
+    {
+      "Object": "RRR_Grig",
+      "RefObject": "Tier3Mob"
+    },
+    {
+      "Object": "RRR_Hostile_T3",
+      "RefObject": "Tier3Mob"
+    },
+    {
+      "Object": "RRR_Hostile_T4",
+      "RefObject": "Tier4Mob"
+    },
+    {
+      "Object": "RRRM_ElderSpawn_BF",
+      "RefObject": "Tier3Mob"
+    },
+    {
+      "Object": "RRRN_LazarusAutumn",
+      "RefObject": "Tier3Mob"
+    },
+    {
+      "Object": "RRRN_GrailThornheart",
+      "RefObject": "Tier3Mob"
+    },
+    {
+      "Object": "RRRN_Shadow",
+      "RefObject": "Tier3Mob"
+    },
+    {
+      "Object": "RRRN_CrisenthShadowsoul",
+      "RefObject": "Tier4Mob"
+    },
+    {
+      "Object": "RRRN_JaydenShadowmend",
+      "RefObject": "Tier4Mob"
+    },
+    {
+      "Object": "RRRN_Assassin",
+      "RefObject": "Tier4Mob"
+    },
+    {
+      "Object": "RRRN_LuxFrost",
+      "RefObject": "Tier5Mob"
+    },
+    {
+      "Object": "RRRN_FirionWinter",
+      "RefObject": "Tier5Mob"
+    },
+    {
+      "Object": "RRRN_Stalker",
+      "RefObject": "Tier5Mob"
+    },
+    {
+      "Object": "RRR_Hostile_T5",
+      "RefObject": "Tier5Mob"
+    },
+    {
+      "Object": "RRR_Hostile_T6",
+      "RefObject": "Tier6Mob"
+    },
+    {
+      "Object": "RRRN_EchoBlack",
+      "RefObject": "Tier6Mob"
+    },
+    {
+      "Object": "RRRN_MathianSerphent",
+      "RefObject": "Tier6Mob"
+    },
+    {
+      "Object": "RRRM_Drowned",
+      "RefObject": "Tier5Mob"
+    },
+    {
+      "Object": "RRRM_Storm",
+      "RefObject": "Tier5Mob"
+    },
+    {
+      "Object": "RRRN_ShadowWarrior",
+      "RefObject": "Tier6Mob"
+    },
+    {
+      "Object": "RRRN_ShadowGuard",
+      "RefObject": "Tier6Mob"
+    },
+    {
+      "Object": "RRRN_ShadowSentinel",
+      "RefObject": "Tier6Mob"
+    },
+    {
+      "Object": "RRRN_ShadowMaster",
+      "RefObject": "Tier6Mob"
+    },
+    {
+      "Object": "RRRM_ElderSpawn_ML",
+      "RefObject": "Tier6Mob"
+    },
+    {
+      "Object": "RRRN_Elv1",
+      "RefObject": "Tier6Mob"
+    },
+    {
+      "Object": "RRRN_Elv2",
+      "RefObject": "Tier6Mob"
+    },
+    {
+      "Object": "RRRN_Elv3",
+      "RefObject": "Tier6Mob"
+    },
+    {
+      "Object": "RRRM_GoblinSlave",
+      "RefObject": "Tier6Mob"
+    },
+    {
+      "Object": "RRRN_SceledrusShadowend",
+      "RefObject": "Tier6Mob"
+    },
+    {
+      "Object": "RRRN_LazarusDeamonne",
+      "RefObject": "Tier6Mob"
+    },
+    {
+      "Object": "RRRM_OldSurtling",
+      "RefObject": "Tier6Mob"
+    },
+    {
+      "Object": "RRRM_FireNeck",
+      "RefObject": "Tier6Mob"
+    },
+    {
+      "Object": "RRRM_SmallFireNeck",
+      "RefObject": "Tier6Mob"
+    },
+    {
+      "Object": "RRRM_Burned",
+      "RefObject": "Tier6Mob"
+    },
+    {
+      "Object": "RRRM_FireHatchling",
+      "RefObject": "Tier6Mob"
+    },
+    {
+      "Object": "RRRM_Damned",
+      "RefObject": "Tier6Mob"
+    },
+    {
+      "Object": "RRRM_GreaterSurtling",
+      "RefObject": "Tier6Mob"
+    },
+    {
+      "Object": "RRRM_FlameDrake",
+      "RefObject": "Tier6Mob"
+    },
+    {
+      "Object": "RRRM_ObsidianGolem",
+      "RefObject": "Tier6Mob"
+    },
+    {
+      "Object": "RRRN_AshVexx",
+      "RefObject": "Tier6Mob"
+    },
+    {
+      "Object": "RRRN_CinderMortem",
+      "RefObject": "Tier6Mob"
+    },
+    {
+      "Object": "RRRN_GrayWolf",
+      "RefObject": "Tier6Mob"
+    },
+    {
+      "Object": "RRRM_IceTroll",
+      "RefObject": "Tier6Mob"
+    },
+    {
+      "Object": "RRRM_IceDrake",
+      "RefObject": "Tier6Mob"
+    },
+    {
+      "Object": "RRRM_DireWolf",
+      "RefObject": "Tier6Mob"
+    },
+    {
+      "Object": "RRRM_GreaterFenring",
+      "RefObject": "Tier6Mob"
+    },
+    {
+      "Object": "RRRN_LincolnHunt",
+      "RefObject": "Tier6Mob"
+    },
+    {
+      "Object": "RRRN_DravenNox",
+      "RefObject": "Tier6Mob"
+    },
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // Tier 0 Mobs (Greyling, Deer, Boar, Neck)
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -1086,7 +1319,7 @@
       "Object": "Neck",
       "RefObject": "Tier0Mob"
     },
-
+    
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // Tier 1 Mobs (Greydwarf, Skeleton)
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1103,7 +1336,7 @@
       "Object": "Skeleton",
       "RefObject": "Tier1Mob"
     },
-
+    
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // Tier 2 Mobs (Greydwarf Brute, Greydwarf Shaman, Rancid Remains)
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1126,7 +1359,7 @@
       "Object": "Skeleton_Poison",
       "RefObject": "Tier2Mob"
     },
-
+    
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // Tier 3 Mobs (Troll, Ghost, Leech, Blob, Draugr, Surtling)
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1243,37 +1476,7 @@
       "Object": "Goblin",
       "RefObject": "Tier5Mob"
     },
-    // Drowned Soul (Drowned)
-    ////////////////////////////////////////////////////////////////////////////////////
-    {
-      "Object": "RRRM_Drowned",
-      "RefObject": "Tier5Mob"
-    },
-    // Storm-herald Wyrven (Storm)
-    ////////////////////////////////////////////////////////////////////////////////////
-    {
-      "Object": "RRRM_Storm",
-      "RefObject": "Tier5Mob"
-    },
-    // Svartalfr Warrior (Elv1)
-    ////////////////////////////////////////////////////////////////////////////////////
-    {
-      "Object": "RRRM_Elv1",
-      "RefObject": "Tier5Mob"
-    },
-    // Svartalfr Archer (Elv2)
-    ////////////////////////////////////////////////////////////////////////////////////
-    {
-      "Object": "RRRM_Elv2",
-      "RefObject": "Tier5Mob"
-    },
-    // Duskseeker Svartalfr (Elv3)
-    ////////////////////////////////////////////////////////////////////////////////////
-    {
-      "Object": "RRRM_Elv3",
-      "RefObject": "Tier5Mob"
-    },
-
+    
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // Tier 6 Mobs (Fuling Berserker, Fuling Shaman)
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1290,48 +1493,7 @@
       "Object": "GoblinShaman",
       "RefObject": "Tier6Mob"
     },
-    // Burned Bones (Burned)
-    ////////////////////////////////////////////////////////////////////////////////////
-    {
-      "Object": "RRRM_Burned",
-      "RefObject": "Tier6Mob"
-    },
-    // Damned One (Damned)
-    ////////////////////////////////////////////////////////////////////////////////////
-    {
-      "Object": "RRRM_Damned",
-      "RefObject": "Tier6Mob"
-    },
-    // Fire-breathing Drake (FireHatchling)
-    ////////////////////////////////////////////////////////////////////////////////////
-    {
-      "Object": "RRRM_FireHatchling",
-      "RefObject": "Tier6Mob"
-    },
-    // Ash-eater Neck (FireNeck)
-    ////////////////////////////////////////////////////////////////////////////////////
-    {
-      "Object": "RRRM_FireNeck",
-      "RefObject": "Tier6Mob"
-    },
-    // Elder Surtling (OldSurtling)
-    ////////////////////////////////////////////////////////////////////////////////////
-    {
-      "Object": "RRRM_OldSurtling",
-      "RefObject": "Tier6Mob"
-    },
-    // Ash-eater Tadpole (SmallFireNeck)
-    ////////////////////////////////////////////////////////////////////////////////////
-    {
-      "Object": "RRRM_SmallFireNeck",
-      "RefObject": "Tier6Mob"
-    },
-    // Subjugated Fuling (SmallFireNeck)
-    ////////////////////////////////////////////////////////////////////////////////////
-    {
-      "Object": "RRRM_GoblinSlave",
-      "RefObject": "Tier6Mob"
-    },
+    
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // BOSSES
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
