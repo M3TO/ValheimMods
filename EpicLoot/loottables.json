@@ -1064,15 +1064,11 @@
 
     {
       "Object": "RRRN_Thief",
-      "RefObject": "Tier0Mob"
-    },
-    {
-      "Object": "RRR_Hostile_T1",
       "RefObject": "Tier1Mob"
     },
     {
-      "Object": "RRR_Hostile_T2",
-      "RefObject": "Tier2Mob"
+      "Object": "RRRM_BrownWolf",
+      "RefObject": "Tier1Mob"
     },
     {
       "Object": "RRRN_UpirGrim",
@@ -1084,6 +1080,10 @@
     },
     {
       "Object": "RRRN_Brigand",
+      "RefObject": "Tier2Mob"
+    },
+    {
+      "Object": "RRRM_GreydwarfMage",
       "RefObject": "Tier2Mob"
     },
     {
@@ -1101,14 +1101,6 @@
     {
       "Object": "RRR_Grig",
       "RefObject": "Tier3Mob"
-    },
-    {
-      "Object": "RRR_Hostile_T3",
-      "RefObject": "Tier3Mob"
-    },
-    {
-      "Object": "RRR_Hostile_T4",
-      "RefObject": "Tier4Mob"
     },
     {
       "Object": "RRRM_ElderSpawn_BF",
@@ -1149,14 +1141,6 @@
     {
       "Object": "RRRN_Stalker",
       "RefObject": "Tier5Mob"
-    },
-    {
-      "Object": "RRR_Hostile_T5",
-      "RefObject": "Tier5Mob"
-    },
-    {
-      "Object": "RRR_Hostile_T6",
-      "RefObject": "Tier6Mob"
     },
     {
       "Object": "RRRN_EchoBlack",
