@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 1707267179
+CRC: 501021914
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 5c05a7f8e28f59aa5c6a6a085b374c98
+    Hash: d4f3c19b0515755be2ff9c7cf3900a59
   TypeTreeHash:
     serializedVersion: 2
-    Hash: a0c6789f22641bd03d47dd63ce00c695
+    Hash: 7664cc45f2b3d5c0a17a99c4a513797a
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -26,6 +26,8 @@ ClassTypes:
 - Class: 48
   Script: {instanceID: 0}
 - Class: 54
+  Script: {instanceID: 0}
+- Class: 64
   Script: {instanceID: 0}
 - Class: 65
   Script: {instanceID: 0}
@@ -48,9 +50,15 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 1521249158, guid: c1b78fa918b030faf1c1f6f6164daeb2, type: 3}
 - Class: 114
+  Script: {fileID: 313648218, guid: c1b78fa918b030faf1c1f6f6164daeb2, type: 3}
+- Class: 114
   Script: {fileID: 2094620348, guid: c1b78fa918b030faf1c1f6f6164daeb2, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 2a4db7a114972834c8e4117be1d82ba3, type: 3}
 - Class: 114
@@ -70,8 +78,6 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
 - Class: 114
-  Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-- Class: 114
   Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
 - Class: 114
   Script: {fileID: 612592066, guid: c1b78fa918b030faf1c1f6f6164daeb2, type: 3}
@@ -81,10 +87,6 @@ ClassTypes:
   Script: {fileID: -201937006, guid: c1b78fa918b030faf1c1f6f6164daeb2, type: 3}
 - Class: 114
   Script: {fileID: 469224316, guid: c1b78fa918b030faf1c1f6f6164daeb2, type: 3}
-- Class: 114
-  Script: {fileID: 313648218, guid: c1b78fa918b030faf1c1f6f6164daeb2, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
 - Class: 115
@@ -108,18 +110,24 @@ ClassTypes:
 SerializeReferenceClassIdentifiers: []
 Assets:
 - Assets/EpicLoot/Prefabs/Equipment/GoldRubyRing.prefab
+- Assets/EpicLoot/Sprites/Abilities/BerserkerIcon.png
+- Assets/EpicLoot/Texture2D/Equipment/PaddedArmorChest2_d.png
 - Assets/EpicLoot/Prefabs/ItemEffects/FeatherFallAura.prefab
 - Assets/EpicLoot/Prefabs/CraftingMaterials/DustRare.prefab
 - Assets/EpicLoot/Sprites/Inventory/SetItemMarker.png
 - Assets/EpicLoot/Prefabs/UI/AbilityBar.prefab
 - Assets/EpicLoot/Prefabs/CraftingMaterials/RunestoneRare.prefab
 - Assets/EpicLoot/Prefabs/ItemEffects/WhiteAura.prefab
+- Assets/EpicLoot/Prefabs/Collision/IceSpikesCollider.prefab
 - Assets/EpicLoot/Prefabs/CraftingMaterials/DustEpic.prefab
+- Assets/EpicLoot/Prefabs/VFX/IceSpikes.prefab
 - Assets/EpicLoot/Prefabs/CraftingMaterials/ReagentRare.prefab
 - Assets/EpicLoot/Sounds/DoubleJump.wav
 - Assets/EpicLoot/Prefabs/LootBeams/RareLootBeam.prefab
 - Assets/EpicLoot/Prefabs/CraftingMaterials/EssenceRare.prefab
+- Assets/EpicLoot/Prefabs/ItemEffects/LightningAuraSledge.prefab
 - Assets/EpicLoot/Prefabs/ItemEffects/FireAura.prefab
+- Assets/EpicLoot/Prefabs/ItemEffects/FrostAuraBattleAxe.prefab
 - Assets/EpicLoot/Prefabs/CraftingMaterials/ShardEpic.prefab
 - Assets/EpicLoot/Sprites/Inventory/GenericSetItemMarker.png
 - Assets/EpicLoot/Prefabs/Equipment/Andvaranaut.prefab
@@ -128,9 +136,11 @@ Assets:
 - Assets/EpicLoot/Sounds/MagicItemDrop.wav
 - Assets/EpicLoot/Prefabs/UI/DebugText.prefab
 - Assets/EpicLoot/Sprites/Inventory/LegendaryItemBg.png
+- Assets/EpicLoot/Texture2D/Equipment/paddedarmortest2_d.png
 - Assets/EpicLoot/Sounds/EpicItemDrop.wav
 - Assets/EpicLoot/Prefabs/StationExtensions/piece_augmenter.prefab
 - Assets/EpicLoot/Prefabs/CraftingMaterials/ReagentLegendary.prefab
+- Assets/EpicLoot/Prefabs/VFX/MagicShield.prefab
 - Assets/EpicLoot/Prefabs/CraftingMaterials/EssenceMagic.prefab
 - Assets/EpicLoot/Prefabs/ItemEffects/GlowingAura.prefab
 - Assets/EpicLoot/Sounds/RareItemDrop.wav
@@ -140,6 +150,7 @@ Assets:
 - Assets/EpicLoot/Sprites/Abilities/BulwarkIcon.png
 - Assets/EpicLoot/Sprites/Inventory/GenericItemBg.png
 - Assets/EpicLoot/Sprites/Inventory/SmallButtonEnchantOverlay.png
+- Assets/EpicLoot/ScriptableObjects/BerserkerStatusEffect.asset
 - Assets/EpicLoot/Prefabs/CraftingMaterials/EssenceEpic.prefab
 - Assets/EpicLoot/Sounds/AbandonBounty.wav
 - Assets/EpicLoot/Sprites/Inventory/EpicItemBg.png
@@ -156,23 +167,31 @@ Assets:
 - Assets/EpicLoot/Prefabs/LootBeams/MagicLootBeam.prefab
 - Assets/Hovl Studio/Auras pack/Prefabs/FireAura 1.prefab
 - Assets/EpicLoot/Prefabs/Adventure/IronBountyToken.prefab
+- Assets/EpicLoot/Prefabs/SFX/sfx_undying.prefab
 - Assets/EpicLoot/Sounds/AugmentItem.wav
 - Assets/EpicLoot/Sounds/ItemLoop.wav
 - Assets/EpicLoot/Sounds/LegendaryItemDrop.wav
 - Assets/EpicLoot/Prefabs/LootBeams/LegendaryLootBeam.prefab
 - Assets/EpicLoot/ScriptableObjects/BulwarkStatusEffect.asset
 - Assets/EpicLoot/Prefabs/CraftingMaterials/RunestoneMagic.prefab
+- Assets/EpicLoot/Prefabs/SFX/sfx_berserker.prefab
 - Assets/EpicLoot/Prefabs/Adventure/GoldBountyToken.prefab
+- Assets/EpicLoot/Texture2D/Equipment/PaddedArmorMain_Heimdall.png
 - Assets/EpicLoot/Sprites/Inventory/RareItemBg.png
+- Assets/EpicLoot/Prefabs/SFX/sfx_bulwark.prefab
 - Assets/EpicLoot/Prefabs/CraftingMaterials/ReagentEpic.prefab
 - Assets/EpicLoot/ScriptableObjects/UndyingStatusEffect.asset
+- Assets/EpicLoot/Texture2D/Equipment/PaddedArmorChest_Heimdall.png
 - Assets/EpicLoot/Sprites/Inventory/Equipped.png
+- Assets/EpicLoot/Prefabs/SFX/sfx_frostcone.prefab
 - Assets/EpicLoot/Prefabs/Equipment/LeatherBelt.prefab
 - Assets/EpicLoot/Prefabs/Adventure/ForestToken.prefab
+- Assets/EpicLoot/Prefabs/VFX/Berserker.prefab
 - Assets/EpicLoot/Prefabs/StationExtensions/piece_enchanter.prefab
 - Assets/EpicLoot/Prefabs/CraftingMaterials/RunestoneLegendary.prefab
 - Assets/EpicLoot/Sprites/Adventure/BountyTokenIron.png
 - Assets/EpicLoot/Prefabs/CraftingMaterials/EssenceLegendary.prefab
 - Assets/EpicLoot/Prefabs/CraftingMaterials/RunestoneEpic.prefab
 - Assets/EpicLoot/Prefabs/CraftingMaterials/ShardRare.prefab
+- Assets/EpicLoot/Prefabs/VFX/Undying.prefab
 Dependencies: []

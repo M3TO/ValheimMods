@@ -1,15 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using Common;
 using EpicLoot.Crafting;
 using EpicLoot.LegendarySystem;
 using ExtendedItemDataFramework;
 using fastJSON;
 using HarmonyLib;
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.UI;
 using Object = UnityEngine.Object;
+// ReSharper disable RedundantAssignment
 
 namespace EpicLoot
 {
@@ -19,7 +22,7 @@ namespace EpicLoot
 
         private static readonly JSONParameters _saveParams = new JSONParameters { UseExtensions = false };
 
-        public MagicItemComponent(ExtendedItemData parent) 
+        public MagicItemComponent(ExtendedItemData parent)
             : base(typeof(MagicItemComponent).AssemblyQualifiedName, parent)
         {
         }
@@ -304,6 +307,53 @@ namespace EpicLoot
         }
     }
 
+    public static class EquipmentEffectCache
+    {
+        public static ConditionalWeakTable<Player, Dictionary<string, float?>> Values = new ConditionalWeakTable<Player, Dictionary<string, float?>>();
+
+        [HarmonyPatch(typeof(Humanoid), nameof(Humanoid.UnequipItem))]
+        public static class EquipmentEffectCache_Humanoid_UnequipItem_Patch
+        {
+            [UsedImplicitly]
+            public static void Prefix(Humanoid __instance, ItemDrop.ItemData item)
+            {
+                if (__instance is Player player)
+                {
+                    Reset(player);
+                }
+            }
+        }
+
+        [HarmonyPatch(typeof(Humanoid), nameof(Humanoid.EquipItem))]
+        public static class EquipmentEffectCache_Humanoid_EquipItem_Patch
+        {
+            [UsedImplicitly]
+            public static void Prefix(Humanoid __instance, ItemDrop.ItemData item)
+            {
+                if (__instance is Player player)
+                {
+                    Reset(player);
+                }
+            }
+        }
+
+        public static void Reset(Player player)
+        {
+            Values.Remove(player);
+        }
+
+        public static float? Get(Player player, string effect, Func<float?> calculate)
+        {
+            var values = Values.GetOrCreateValue(player);
+            if (values.TryGetValue(effect, out float? value))
+            {
+                return value;
+            }
+
+            return values[effect] = calculate();
+        }
+    }
+
     public static class PlayerExtensions
     {
         public static List<ItemDrop.ItemData> GetEquipment(this Player player)
@@ -378,21 +428,20 @@ namespace EpicLoot
 
         public static float GetTotalActiveMagicEffectValue(this Player player, string effectType, float scale = 1.0f)
         {
-            return player.GetAllActiveMagicEffects(effectType)
-                .Select(x => x.EffectValue)
-                .DefaultIfEmpty(0)
-                .Sum() * scale;
+            return scale * (EquipmentEffectCache.Get(player, effectType, () =>
+            {
+                List<MagicItemEffect> allEffects = player.GetAllActiveMagicEffects(effectType);
+                return allEffects.Count > 0 ? (float?)allEffects.Select(x => x.EffectValue).Sum() : null;
+            }) ?? 0);
         }
 
         public static bool HasActiveMagicEffect(this Player player, string effectType)
         {
-            return GetMagicEquipmentWithEffect(player, effectType).Count > 0 || player.GetAllActiveSetMagicEffects(effectType).Count > 0;
-        }
-
-        private static bool HasMagicEquipmentWithEffect(this Player player, string effectType, out List<ItemDrop.ItemData> equipment)
-        {
-            equipment = GetMagicEquipmentWithEffect(player, effectType);
-            return equipment.Count > 0;
+            return null != EquipmentEffectCache.Get(player, effectType, () =>
+            {
+                List<MagicItemEffect> allEffects = player.GetAllActiveMagicEffects(effectType);
+                return allEffects.Count > 0 ? (float?)allEffects.Select(x => x.EffectValue).Sum() : null;
+            });
         }
 
         public static List<ItemDrop.ItemData> GetEquippedSetPieces(this Player player, string setName)
@@ -537,40 +586,89 @@ namespace EpicLoot
                 return;
             }
 
+            Dictionary<int, ItemDrop.ItemData> itemPosition = new Dictionary<int, ItemDrop.ItemData>();
+            foreach (ItemDrop.ItemData itemData in ___m_items)
+            {
+                if (GetElementIndexForItem(___m_elements, itemData) is int elementIndex)
+                {
+                    itemPosition[elementIndex] = itemData;
+                }
+                else
+                {
+                    EpicLoot.LogWarning($"Tried to get element for {itemData.m_shared.m_name} at {itemData.m_gridPos}, but element was null (total elements = {___m_elements.Count})");
+                }
+            }
+
             for (var index = 0; index < ___m_elements.Count; index++)
             {
                 var element = ___m_elements[index];
-                var magicItem = ItemBackgroundHelper.CreateAndGetMagicItemBackgroundImage(element.m_go, element.m_equiped, false);
-                magicItem.enabled = false;
-            }
-
-            for (var index = 0; index < ___m_items.Count; ++index)
-            {
-                var itemData = ___m_items[index];
-                var element = GetElementForItem(___m_elements, itemData);
-                if (element == null)
-                {
-                    EpicLoot.LogWarning($"Tried to get element for {itemData.m_shared.m_name} at {itemData.m_gridPos}, but element was null (total elements = {___m_elements.Count})");
-                    continue;
-                }
 
                 var magicItem = ItemBackgroundHelper.CreateAndGetMagicItemBackgroundImage(element.m_go, element.m_equiped, false);
-                if (itemData.UseMagicBackground())
+                if (itemPosition.TryGetValue(index, out ItemDrop.ItemData itemData) && itemData.UseMagicBackground())
                 {
                     magicItem.enabled = true;
                     magicItem.sprite = EpicLoot.GetMagicItemBgSprite();
                     magicItem.color = itemData.GetRarityColor();
                 }
+                else
+                {
+                    magicItem.enabled = false;
+                }
             }
         }
 
-        private static HotkeyBar.ElementData GetElementForItem(List<HotkeyBar.ElementData> elements, ItemDrop.ItemData item)
+        private static int? GetElementIndexForItem(List<HotkeyBar.ElementData> elements, ItemDrop.ItemData item)
         {
-            var index = item.m_gridPos.y == 0 
-                ? item.m_gridPos.x 
+            var index = item.m_gridPos.y == 0
+                ? item.m_gridPos.x
                 : Player.m_localPlayer.GetInventory().m_width + item.m_gridPos.x - 5;
 
-            return index >= 0 && index < elements.Count ? elements[index] : null;
+            return index >= 0 && index < elements.Count ? (int?) index : null;
+        }
+    }
+
+    [HarmonyPatch(typeof(Player), nameof(Player.GetActionProgress))]
+    public static class Player_GetActionProgress_Patch
+    {
+        public static void Postfix(Player __instance, ref string name)
+        {
+            if (__instance.m_equipQueue.Count > 0)
+            {
+                Player.EquipQueueData equip = __instance.m_equipQueue[0];
+                if (equip.m_duration > 0.5f)
+                {
+                    name = !equip.m_equip ? "$hud_unequipping " + equip.m_item.GetDecoratedName() : "$hud_equipping " + equip.m_item.GetDecoratedName();
+                }
+            }
+        }
+    }
+
+    [HarmonyPatch(typeof(ItemDrop))]
+    public static class ItemDrop_Patches
+    {
+        [HarmonyPatch(typeof(ItemDrop), nameof(ItemDrop.GetHoverText))]
+        [HarmonyPrefix]
+        public static bool GetHoverText_Prefix(ItemDrop __instance, ref string __result)
+        {
+            var str = __instance.m_itemData.GetDecoratedName();
+            if (__instance.m_itemData.m_quality > 1)
+            {
+                str = $"{str}[{__instance.m_itemData.m_quality}] ";
+            }
+            else if (__instance.m_itemData.m_stack > 1)
+            {
+                str = $"{str} x{__instance.m_itemData.m_stack}";
+            }
+            __result = Localization.instance.Localize($"{str}\n[<color=yellow><b>$KEY_Use</b></color>] $inventory_pickup");
+            return false;
+        }
+
+        [HarmonyPatch(typeof(ItemDrop), nameof(ItemDrop.GetHoverName))]
+        [HarmonyPrefix]
+        public static bool GetHoverName_Prefix(ItemDrop __instance, ref string __result)
+        {
+            __result = __instance.m_itemData.GetDecoratedName();
+            return false;
         }
     }
 }

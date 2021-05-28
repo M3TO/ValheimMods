@@ -69,7 +69,6 @@ namespace EpicLoot.Abilities
 
         public virtual void TryActivate()
         {
-            Debug.LogWarning($"TryActivate Ability: {AbilityDef.ID}");
             if (CanActivate())
             {
                 Activate();
@@ -84,7 +83,6 @@ namespace EpicLoot.Abilities
                 SetCooldownEndTime(cooldownEndTime);
             }
 
-            Debug.LogWarning($"Activated Ability: {AbilityDef.ID}");
             switch (AbilityDef.Action)
             {
                 case AbilityAction.Custom:
@@ -99,7 +97,6 @@ namespace EpicLoot.Abilities
 
         protected virtual void ActivateCustomAction()
         {
-
         }
 
         protected virtual void ActivateStatusEffectAction()
@@ -134,12 +131,12 @@ namespace EpicLoot.Abilities
 
         protected virtual void SetCooldownEndTime(float cooldownEndTime)
         {
-            _netView.GetZDO().Set(CooldownEndKey, cooldownEndTime);
+            _netView?.GetZDO()?.Set(CooldownEndKey, cooldownEndTime);
         }
 
         public virtual float GetCooldownEndTime()
         {
-            return _netView.GetZDO().GetFloat(CooldownEndKey);
+            return _netView?.GetZDO()?.GetFloat(CooldownEndKey) ?? 0;
         }
 
         public bool IsActivatedAbility()
