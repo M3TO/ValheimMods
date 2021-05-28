@@ -4,74 +4,34 @@
   "DisenchantProducts": [
     {
       "IsMagic": true, 
-      "ItemTypes" : [ "OneHandedWeapon", "Bow", "TwoHandedWeapon", "Torch", "Tool" ],
+      "ItemTypes" : [ "OneHandedWeapon", "Bow", "TwoHandedWeapon", "Torch", "Tool", "Shield", "Helmet", "Chest", "Legs", "Shoulder", "Utility" ],
       "Rarity": "Magic",
       "Products": [
-        { "Item": "DustMagic",    "Amount": 1 },
-        { "Item": "EssenceMagic", "Amount": 1 }
+        { "Item": "DustMagic",    "Amount": 3 }
       ]
     },
     {
       "IsMagic": true, 
-      "ItemTypes" : [ "OneHandedWeapon", "Bow", "TwoHandedWeapon", "Torch", "Tool" ],
+      "ItemTypes" : [ "OneHandedWeapon", "Bow", "TwoHandedWeapon", "Torch", "Tool", "Shield", "Helmet", "Chest", "Legs", "Shoulder", "Utility" ],
       "Rarity": "Rare",
       "Products": [
-        { "Item": "DustRare",    "Amount": 1 },
-        { "Item": "EssenceRare", "Amount": 1 }
+        { "Item": "DustRare",    "Amount": 2 }
       ]
     },
     {
       "IsMagic": true, 
-      "ItemTypes" : [ "OneHandedWeapon", "Bow", "TwoHandedWeapon", "Torch", "Tool" ],
+      "ItemTypes" : [ "OneHandedWeapon", "Bow", "TwoHandedWeapon", "Torch", "Tool", "Shield", "Helmet", "Chest", "Legs", "Shoulder", "Utility" ],
       "Rarity": "Epic",
       "Products": [
-        { "Item": "DustEpic",    "Amount": 1 },
-        { "Item": "EssenceEpic", "Amount": 1 }
+        { "Item": "DustEpic",    "Amount": 1 }
       ]
     },
     {
       "IsMagic": true, 
-      "ItemTypes" : [ "OneHandedWeapon", "Bow", "TwoHandedWeapon", "Torch", "Tool" ],
+      "ItemTypes" : [ "OneHandedWeapon", "Bow", "TwoHandedWeapon", "Torch", "Tool", "Shield", "Helmet", "Chest", "Legs", "Shoulder", "Utility" ],
       "Rarity": "Legendary",
       "Products": [
-        { "Item": "DustLegendary",    "Amount": 1 },
-        { "Item": "EssenceLegendary", "Amount": 1 }
-      ]
-    },
-    {
-      "IsMagic": true, 
-      "ItemTypes" : [ "Shield", "Helmet", "Chest", "Legs", "Shoulder", "Utility" ],
-      "Rarity": "Magic",
-      "Products": [
-        { "Item": "DustMagic",    "Amount": 1 },
-        { "Item": "EssenceMagic", "Amount": 1 }
-      ]
-    },
-    {
-      "IsMagic": true, 
-      "ItemTypes" : [ "Shield", "Helmet", "Chest", "Legs", "Shoulder", "Utility" ],
-      "Rarity": "Rare",
-      "Products": [
-        { "Item": "DustRare",    "Amount": 1 },
-        { "Item": "EssenceRare", "Amount": 1 }
-      ]
-    },
-    {
-      "IsMagic": true, 
-      "ItemTypes" : [ "Shield", "Helmet", "Chest", "Legs", "Shoulder", "Utility" ],
-      "Rarity": "Epic",
-      "Products": [
-        { "Item": "DustEpic",    "Amount": 1 },
-        { "Item": "EssenceEpic", "Amount": 1 }
-      ]
-    },
-    {
-      "IsMagic": true, 
-      "ItemTypes" : [ "Shield", "Helmet", "Chest", "Legs", "Shoulder", "Utility" ],
-      "Rarity": "Legendary",
-      "Products": [
-        { "Item": "DustLegendary",    "Amount": 1 },
-        { "Item": "EssenceLegendary", "Amount": 1 }
+        { "Item": "DustLegendary",    "Amount": 1 }
       ]
     },
     {
@@ -122,22 +82,19 @@
     {
       "ItemNames" : [ "$item_cryptkey" ],
       "Products" : [
-        { "Item": "DustRare",    "Amount": 2 },
-        { "Item": "EssenceRare", "Amount": 2 }
+        { "Item": "DustRare",    "Amount": 2 }
       ]
     },
     {
       "ItemNames" : [ "$item_dragontear" ],
       "Products" : [
-        { "Item": "DustLegendary",    "Amount": 2 },
-        { "Item": "EssenceLegendary", "Amount": 2 }
+        { "Item": "DustLegendary",    "Amount": 2 }
       ]
     },
     {
       "ItemNames" : [ "Yagluth thing" ],
       "Products" : [
-        { "Item": "DustLegendary",    "Amount": 6 },
-        { "Item": "EssenceLegendary", "Amount": 6 }
+        { "Item": "DustLegendary",    "Amount": 6 }
       ]
     }
   ],
@@ -147,75 +104,35 @@
   ///////////////////////////////////////////////////////////////////////////////////////////////
   "EnchantCosts": [
     {
-      "ItemTypes" : [ "OneHandedWeapon", "Bow", "TwoHandedWeapon", "Torch", "Tool" ],
+      "ItemTypes" : [ "OneHandedWeapon", "Bow", "TwoHandedWeapon", "Torch", "Tool", "Shield", "Helmet", "Chest", "Legs", "Shoulder", "Utility" ],
       "Rarity": "Magic",
       "Cost": [
         { "Item": "RunestoneMagic", "Amount": 1 },
-        { "Item": "DustMagic",      "Amount": 5 },
-        { "Item": "EssenceMagic",   "Amount": 5 }
+        { "Item": "DustMagic",      "Amount": 5 }
       ]
     },
     {
-      "ItemTypes" : [ "OneHandedWeapon", "Bow", "TwoHandedWeapon", "Torch", "Tool" ],
+      "ItemTypes" : [ "OneHandedWeapon", "Bow", "TwoHandedWeapon", "Torch", "Tool", "Shield", "Helmet", "Chest", "Legs", "Shoulder", "Utility" ],
       "Rarity": "Rare",
       "Cost": [
         { "Item": "RunestoneRare", "Amount": 1 },
-        { "Item": "DustRare",      "Amount": 5 },
-        { "Item": "EssenceRare",   "Amount": 5 }
+        { "Item": "DustRare",      "Amount": 5 }
       ]
     },
     {
-      "ItemTypes" : [ "OneHandedWeapon", "Bow", "TwoHandedWeapon", "Torch", "Tool" ],
+      "ItemTypes" : [ "OneHandedWeapon", "Bow", "TwoHandedWeapon", "Torch", "Tool", "Shield", "Helmet", "Chest", "Legs", "Shoulder", "Utility" ],
       "Rarity": "Epic",
       "Cost": [
         { "Item": "RunestoneEpic", "Amount": 1 },
-        { "Item": "DustEpic",      "Amount": 5 },
-        { "Item": "EssenceEpic",   "Amount": 5 }
+        { "Item": "DustEpic",      "Amount": 5 }
       ]
     },
     {
-      "ItemTypes" : [ "OneHandedWeapon", "Bow", "TwoHandedWeapon", "Torch", "Tool" ],
+      "ItemTypes" : [ "OneHandedWeapon", "Bow", "TwoHandedWeapon", "Torch", "Tool", "Shield", "Helmet", "Chest", "Legs", "Shoulder", "Utility" ],
       "Rarity": "Legendary",
       "Cost": [
         { "Item": "RunestoneLegendary", "Amount": 1 },
-        { "Item": "DustLegendary",      "Amount": 5 },
-        { "Item": "EssenceLegendary",   "Amount": 5 }
-      ]
-    },
-    {
-      "ItemTypes" : [ "Shield", "Helmet", "Chest", "Legs", "Shoulder", "Utility" ],
-      "Rarity": "Magic",
-      "Cost": [
-        { "Item": "RunestoneMagic", "Amount": 1 },
-        { "Item": "DustMagic",      "Amount": 5 },
-        { "Item": "EssenceMagic",   "Amount": 5 }
-      ]
-    },
-    {
-      "ItemTypes" : [ "Shield", "Helmet", "Chest", "Legs", "Shoulder", "Utility" ],
-      "Rarity": "Rare",
-      "Cost": [
-        { "Item": "RunestoneRare", "Amount": 1 },
-        { "Item": "DustRare",      "Amount": 5 },
-        { "Item": "EssenceRare",   "Amount": 5 }
-      ]
-    },
-    {
-      "ItemTypes" : [ "Shield", "Helmet", "Chest", "Legs", "Shoulder", "Utility" ],
-      "Rarity": "Epic",
-      "Cost": [
-        { "Item": "RunestoneEpic", "Amount": 1 },
-        { "Item": "DustEpic",      "Amount": 5 },
-        { "Item": "EssenceEpic",   "Amount": 5 }
-      ]
-    },
-    {
-      "ItemTypes" : [ "Shield", "Helmet", "Chest", "Legs", "Shoulder", "Utility" ],
-      "Rarity": "Legendary",
-      "Cost": [
-        { "Item": "RunestoneLegendary", "Amount": 1 },
-        { "Item": "DustLegendary",      "Amount": 5 },
-        { "Item": "EssenceLegendary",   "Amount": 5 }
+        { "Item": "DustLegendary",      "Amount": 5 }
       ]
     }
   ],
@@ -225,75 +142,35 @@
   ///////////////////////////////////////////////////////////////////////////////////////////////
   "AugmentCosts": [
     {
-      "ItemTypes" : [ "OneHandedWeapon", "Bow", "TwoHandedWeapon", "Torch", "Tool" ],
+      "ItemTypes" : [ "OneHandedWeapon", "Bow", "TwoHandedWeapon", "Torch", "Tool", "Shield", "Helmet", "Chest", "Legs", "Shoulder", "Utility" ],
       "Rarity": "Magic",
       "Cost": [
         { "Item": "ShardMagic",   "Amount": 1 },
-        { "Item": "DustMagic",    "Amount": 1 },
-        { "Item": "EssenceMagic", "Amount": 1 }
+        { "Item": "DustMagic",    "Amount": 1 }
       ]
     },
     {
-      "ItemTypes" : [ "OneHandedWeapon", "Bow", "TwoHandedWeapon", "Torch", "Tool" ],
+      "ItemTypes" : [ "OneHandedWeapon", "Bow", "TwoHandedWeapon", "Torch", "Tool", "Shield", "Helmet", "Chest", "Legs", "Shoulder", "Utility" ],
       "Rarity": "Rare",
       "Cost": [
         { "Item": "ShardRare",   "Amount": 1 },
-        { "Item": "DustRare",    "Amount": 1 },
-        { "Item": "EssenceRare", "Amount": 1 }
+        { "Item": "DustRare",    "Amount": 1 }
       ]
     },
     {
-      "ItemTypes" : [ "OneHandedWeapon", "Bow", "TwoHandedWeapon", "Torch", "Tool" ],
+      "ItemTypes" : [ "OneHandedWeapon", "Bow", "TwoHandedWeapon", "Torch", "Tool", "Shield", "Helmet", "Chest", "Legs", "Shoulder", "Utility" ],
       "Rarity": "Epic",
       "Cost": [
         { "Item": "ShardEpic",   "Amount": 1 },
-        { "Item": "DustEpic",    "Amount": 1 },
-        { "Item": "EssenceEpic", "Amount": 1 }
+        { "Item": "DustEpic",    "Amount": 1 }
       ]
     },
     {
-      "ItemTypes" : [ "OneHandedWeapon", "Bow", "TwoHandedWeapon", "Torch", "Tool" ],
+      "ItemTypes" : [ "OneHandedWeapon", "Bow", "TwoHandedWeapon", "Torch", "Tool", "Shield", "Helmet", "Chest", "Legs", "Shoulder", "Utility" ],
       "Rarity": "Legendary",
       "Cost": [
         { "Item": "ShardLegendary",   "Amount": 1 },
-        { "Item": "DustLegendary",    "Amount": 1 },
-        { "Item": "EssenceLegendary", "Amount": 1 }
-      ]
-    },
-    {
-      "ItemTypes" : [ "Shield", "Helmet", "Chest", "Legs", "Shoulder", "Utility" ],
-      "Rarity": "Magic",
-      "Cost": [
-        { "Item": "ShardMagic",   "Amount": 1 },
-        { "Item": "DustMagic",    "Amount": 1 },
-        { "Item": "EssenceMagic", "Amount": 1 }
-      ]
-    },
-    {
-      "ItemTypes" : [ "Shield", "Helmet", "Chest", "Legs", "Shoulder", "Utility" ],
-      "Rarity": "Rare",
-      "Cost": [
-        { "Item": "ShardRare",   "Amount": 1 },
-        { "Item": "DustRare",    "Amount": 1 },
-        { "Item": "EssenceRare", "Amount": 1 }
-      ]
-    },
-    {
-      "ItemTypes" : [ "Shield", "Helmet", "Chest", "Legs", "Shoulder", "Utility" ],
-      "Rarity": "Epic",
-      "Cost": [
-        { "Item": "ShardEpic",   "Amount": 1 },
-        { "Item": "DustEpic",    "Amount": 1 },
-        { "Item": "EssenceEpic", "Amount": 1 }
-      ]
-    },
-    {
-      "ItemTypes" : [ "Shield", "Helmet", "Chest", "Legs", "Shoulder", "Utility" ],
-      "Rarity": "Legendary",
-      "Cost": [
-        { "Item": "ShardLegendary",   "Amount": 1 },
-        { "Item": "DustLegendary",    "Amount": 1 },
-        { "Item": "EssenceLegendary", "Amount": 1 }
+        { "Item": "DustLegendary",    "Amount": 1 }
       ]
     }
   ],

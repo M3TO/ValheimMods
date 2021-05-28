@@ -365,9 +365,9 @@ namespace EpicLoot
                 ExtendStation = "forge",
                 Resources = new List<RecipeRequirementConfig>
                 {
-                    new RecipeRequirementConfig { item = "Obsidian", amount = 10 },
-                    new RecipeRequirementConfig { item = "Crystal", amount = 3 },
-                    new RecipeRequirementConfig { item = "Bronze", amount = 3 },
+                    new RecipeRequirementConfig { item = "TrophyEikthyr", amount = 1 },
+                    new RecipeRequirementConfig { item = "SurtlingCore", amount = 3 },
+                    new RecipeRequirementConfig { item = "Bronze", amount = 5 },
                 }
             });
 

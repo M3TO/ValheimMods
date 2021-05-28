@@ -5,19 +5,15 @@
     "Materials": [
       { "Item": "ShardMagic",       "CoinsCost": 5   },
       { "Item": "DustMagic",        "CoinsCost": 5   },
-      { "Item": "ReagentMagic",     "CoinsCost": 5   },
       { "Item": "EssenceMagic",     "CoinsCost": 5   },
       { "Item": "ShardRare",        "CoinsCost": 25  },
       { "Item": "DustRare",         "CoinsCost": 25  },
-      { "Item": "ReagentRare",      "CoinsCost": 25  },
       { "Item": "EssenceRare",      "CoinsCost": 25  },
       { "Item": "ShardEpic",        "CoinsCost": 125 },
       { "Item": "DustEpic",         "CoinsCost": 125 },
-      { "Item": "ReagentEpic",      "CoinsCost": 125 },
       { "Item": "EssenceEpic",      "CoinsCost": 125 },
       { "Item": "ShardLegendary",   "CoinsCost": 625 },
       { "Item": "DustLegendary",    "CoinsCost": 625 },
-      { "Item": "ReagentLegendary", "CoinsCost": 625 },
       { "Item": "EssenceLegendary", "CoinsCost": 625 }
     ],
     "RollsPerRarity": [1, 1, 1, 1],
@@ -25,7 +21,7 @@
     ],
     "RandomItemsCount": 0, 
     "OtherItems": [
-      { "Item": "Andvaranaut", "CoinsCost": 2000 }
+      { "Item": "Andvaranaut", "CoinsCost": 750 }
     ]
   },
   "Gamble": { 
@@ -50,11 +46,11 @@
       "LeatherBelt",
       "GoldRubyRing"
     ],
-    "GamblesCount": 4,
+    "GamblesCount": 5,
     "GambleRarityChance": [ 10, 69, 15, 5, 1 ],
     "GambleRarityChanceByRarity" : [
-      [ 0, 90, 9, 1, 0 ],
-      [ 0, 0, 90, 9, 1 ],
+      [ 0, 80, 19, 1, 0 ],
+      [ 0, 10, 80, 9, 1 ],
       [ 0, 0, 0, 90, 10 ],
       [ 0, 0, 0, 0, 100 ]
     ],
@@ -75,11 +71,11 @@
 
       { "Item": "AxeStone",               "CoinsCost": 100  },
       { "Item": "AxeFlint",               "CoinsCost": 200  },
-      { "Item": "AxeBronze",              "CoinsCost": 350  },
-      { "Item": "AxeIron",                "CoinsCost": 500  },
-      { "Item": "AxeBlackMetal",          "CoinsCost": 1500 },
+      { "Item": "AxeBronze",              "CoinsCost": 750  },
+      { "Item": "AxeIron",                "CoinsCost": 1500 },
+      { "Item": "AxeBlackMetal",          "CoinsCost": 2500 },
 
-      { "Item": "Battleaxe",              "CoinsCost": 500  },
+      { "Item": "Battleaxe",              "CoinsCost": 1000 },
 
       { "Item": "Club",                   "CoinsCost": 100  },
       { "Item": "MaceBronze",             "CoinsCost": 350  },
@@ -94,11 +90,11 @@
 
       { "Item": "PickaxeStone",           "CoinsCost": 450  },
       { "Item": "PickaxeAntler",          "CoinsCost": 300  },
-      { "Item": "PickaxeBronze",          "CoinsCost": 600  },
-      { "Item": "PickaxeIron",            "CoinsCost": 500  },
+      { "Item": "PickaxeBronze",          "CoinsCost": 750  },
+      { "Item": "PickaxeIron",            "CoinsCost": 1500 },
 
       { "Item": "SledgeStagbreaker",      "CoinsCost": 200  },
-      { "Item": "SledgeIron",             "CoinsCost": 700  },
+      { "Item": "SledgeIron",             "CoinsCost": 1200 },
 
       { "Item": "SpearFlint",             "CoinsCost": 100  },
       { "Item": "SpearBronze",            "CoinsCost": 300  },
@@ -124,7 +120,7 @@
 
       { "Item": "ShieldWoodTower",        "CoinsCost": 130  },
       { "Item": "ShieldIronTower",        "CoinsCost": 700  },
-      { "Item": "ShieldSerpentscale",     "CoinsCost": 700  },
+      { "Item": "ShieldSerpentscale",     "CoinsCost": 1800 },
       { "Item": "ShieldBlackmetalTower",  "CoinsCost": 1800 },
 
       { "Item": "ArmorRagsChest",         "CoinsCost": 100  },
@@ -147,16 +143,16 @@
       { "Item": "HelmetTrollLeather",     "CoinsCost": 150  },
       { "Item": "HelmetBronze",           "CoinsCost": 300  },
       { "Item": "HelmetIron",             "CoinsCost": 450  },
-      { "Item": "HelmetDrake",            "CoinsCost": 750  },
-      { "Item": "HelmetPadded",           "CoinsCost": 1000 },
+      { "Item": "HelmetDrake",            "CoinsCost": 1250 },
+      { "Item": "HelmetPadded",           "CoinsCost": 2000 },
 
       { "Item": "CapeDeerHide",           "CoinsCost": 100  },
       { "Item": "CapeTrollHide",          "CoinsCost": 250  },
       { "Item": "CapeWolf",               "CoinsCost": 500  },
       { "Item": "CapeLinen",              "CoinsCost": 1000 },
-      { "Item": "CapeLox",                "CoinsCost": 750  },
+      { "Item": "CapeLox",                "CoinsCost": 1500 },
 
-      { "Item": "LeatherBelt",            "CoinsCost": 300  },
+      { "Item": "LeatherBelt",            "CoinsCost": 600  },
       { "Item": "GoldRubyRing",           "CoinsCost": 500  }
     ]
   },
@@ -236,12 +232,12 @@
       { "Biome": "Plains",      "TargetID": "Deathsquito",      "RewardGold": 0, "RewardIron": 5, "RewardCoins": 35   },
       { "Biome": "Plains",      "TargetID": "Deathsquito",      "RewardGold": 3, "RewardIron": 8, "RewardCoins": 50,  "Adds": [ { "ID": "Deathsquito", "Count": 2 }  ] },
       { "Biome": "Plains",      "TargetID": "GoblinBrute",      "RewardGold": 3, "RewardIron": 0, "RewardCoins": 80   },
-      { "Biome": "Plains",      "TargetID": "GoblinBrute",      "RewardGold": 3, "RewardIron": 8, "RewardCoins": 120,  "Adds": [ { "ID": "Goblin",      "Count": 2 }  ] },
-      { "Biome": "Plains",      "TargetID": "GoblinBrute",      "RewardGold": 3, "RewardIron": 10,"RewardCoins": 180, "Adds": [ { "ID": "Goblin",      "Count": 3 }  ] },
-      { "Biome": "Plains",      "TargetID": "GoblinShaman",     "RewardGold": 3, "RewardIron": 10, "RewardCoins":200, "Adds": [ { "ID": "Goblin",      "Count": 3 }  ] },
-      { "Biome": "Plains",      "TargetID": "GoblinShaman",     "RewardGold": 5, "RewardIron": 15, "RewardCoins":250, "Adds": [ { "ID": "GoblinBrute", "Count": 1 }, { "ID": "Goblin", "Count": 2 } ] },
+      { "Biome": "Plains",      "TargetID": "GoblinBrute",      "RewardGold": 3, "RewardIron": 8, "RewardCoins": 150,  "Adds": [ { "ID": "Goblin",      "Count": 2 }  ] },
+      { "Biome": "Plains",      "TargetID": "GoblinBrute",      "RewardGold": 3, "RewardIron": 10,"RewardCoins": 250, "Adds": [ { "ID": "Goblin",      "Count": 3 }  ] },
+      { "Biome": "Plains",      "TargetID": "GoblinShaman",     "RewardGold": 3, "RewardIron": 10, "RewardCoins":300, "Adds": [ { "ID": "Goblin",      "Count": 3 }  ] },
+      { "Biome": "Plains",      "TargetID": "GoblinShaman",     "RewardGold": 5, "RewardIron": 15, "RewardCoins":500, "Adds": [ { "ID": "GoblinBrute", "Count": 1 }, { "ID": "Goblin", "Count": 2 } ] },
     
-      { "Biome": "Ocean",       "TargetID": "Serpent",          "RewardGold": 1, "RewardIron": 0, "RewardCoins": 30 }
+      { "Biome": "Ocean",       "TargetID": "Serpent",          "RewardGold": 1, "RewardIron": 0, "RewardCoins": 50 }
     ],
     "Names": {
       "Prefixes": [
