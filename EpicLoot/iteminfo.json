@@ -3,77 +3,151 @@
     {
       "Type": "Swords",
       "Fallback": "AxeFlint",
-      "Items": [ "SwordBronze", "SwordIron", "SwordSilver", "SwordBlackmetal" ]
+      "Items": [ "SwordBronze", "SwordIron", "SwordSilver", "SwordBlackmetal", "SwordFireTH" ]
+    },
+    {
+      "Type": "TwoHandSwords",
+      "Fallback": "AxeFlint",
+      "Items": [ "GreatswordIron", "GreatswordChitinTH", "SwordFolcbrand", "GreatswordBlackmetal", "GreatswordFireTH"]
     },
     {
       "Type": "Axes",
-      "Fallback": "Club",
-      "Items": [ "AxeStone", "AxeFlint", "AxeBronze", "AxeIron", "AxeBlackMetal" ]
+      "Fallback": "AxeStone",
+      "Items": [ "AxeStone", "AxeFlint", "AxeBronze", "AxeIron", "AxeForstasca", "AxeBlackMetal", "AxeSerpentTH", "AxeFireTH" ]
     },
     {
       "Type": "TwoHandAxes",
-      "Fallback": "AxeIron",
-      "Items": [ "Battleaxe" ]
+      "Fallback": "AxeFlint",
+      "Items": [ "Battleaxe", "BattleaxeBronzeTerraheim", "BattleaxeSilver", "BattleaxeBlackmetal", "GreataxeBlackmetal", "BattleaxeFireTH" ]
     },
     {
       "Type": "Knives",
-      "Fallback": "Club",
-      "Items": [ "KnifeFlint", "KnifeCopper", "KnifeChitin", "KnifeBlackMetal" ]
+      "Fallback": "AxeFlint",
+      "Items": [ "KnifeFlint", "KnifeCopper", "KnifeIron", "KnifeSilverTH", "ShieldSilverDagger", "KnifeBlackMetal", "KnifeFireTH" ]
     },
     {
       "Type": "Clubs",
-      "Fallback": "",
-      "Items": [ "Club", "MaceBronze", "MaceIron", "MaceSilver", "MaceNeedle" ]
+      "Fallback": "Club",
+      "Items": [ "Club", "MaceBronze", "MaceIron", "MaceSilver", "MaceNeedle", "MaceFireTH" ]
     },
     {
       "Type": "Sledges",
-      "Fallback": "AxeFlint",
-      "Items": [ "SledgeStagbreaker", "SledgeIron" ]
+      "Fallback": "Club",
+      "Items": [ "SledgeStagbreaker", "SledgeIron", "SledgeFireTH" ]
     },
     {
       "Type": "Polearms",
-      "Fallback": "SpearBronze",
-      "Items": [ "AtgeirBronze", "AtgeirIron", "AtgeirBlackmetal" ]
+      "Fallback": "AxeFlint",
+      "Items": [ "AtgeirBronze", "AtgeirIron", "AtgeirSilver", "AtgeirBlackmetal", "AtgeirFireTH" ]
     },
     {
       "Type": "Spears",
-      "Fallback": "Club",
-      "Items": [ "SpearFlint", "SpearBronze", "SpearElderbark", "SpearChitin", "SpearWolfFang" ]
+      "Fallback": "AxeFlint",
+      "Items": [ "SpearFlint", "SpearBronze", "SpearElderbark", "SpearChitin", "SpearWolfFang", "SpearBlackmetal", "SpearFireTH" ]
     },
     {
       "Type": "Pickaxes",
       "Fallback": "AxeFlint",
-      "Items": [ "PickaxeAntler", "PickaxeBronze", "PickaxeIron" ]
+      "Items": [ "PickaxeAntler", "PickaxeBronze", "PickaxeIron", "PickaxeBlackmetal" ]
     },
     {
       "Type": "Bows",
       "Fallback": "Club",
-      "Items": [ "Bow", "BowFineWood", "BowHuntsman", "BowDraugrFang" ]
+      "Items": [ "Bow", "BowFineWood", "BowHuntsman", "BowDraugrFang", "BowBlackmetalTH", "BowFireTH" ]
     },
     {
       "Type": "RoundShields",
-      "Fallback": "Club",
+      "Fallback": "ShieldWood",
       "Items": [ "ShieldWood", "ShieldBronzeBuckler", "ShieldBanded", "ShieldSilver", "ShieldBlackmetal" ]
     },
     {
       "Type": "TowerShields",
-      "Fallback": "Club",
+      "Fallback": "ShieldWoodTower",
       "Items": [ "ShieldWoodTower", "ShieldIronTower", "ShieldSerpentscale", "ShieldBlackmetalTower" ]
     },
     {
       "Type": "ChestArmor",
-      "Fallback": "",
-      "Items": [ "ArmorRagsChest", "ArmorLeatherChest", "ArmorTrollLeatherChest", "ArmorBronzeChest", "ArmorIronChest", "ArmorWolfChest", "ArmorPaddedCuirass" ]
+      "Fallback": "ArmorRagsChest",
+      "Items": [
+		    "ArmorRagsChest", 
+		    "ArmorLeatherChest",
+		    "ArmorTrollLeatherChest",
+		    "ArmorBronzeChest",
+		    "ArmorIronChest",
+		    "ArmorWolfChest",
+		    "ArmorPaddedCuirass",
+		    "ArmorLeatherChestT1_Terraheim_AddNewSets_AddLeatherArmor",
+		    "ArmorTrollLeatherChestT2_Terraheim_AddNewSets_AddTrollLeatherArmor",
+		    "ArmorLeatherChestT2_Terraheim_AddNewSets_AddLeatherArmor",
+		    "ArmorLeatherChestT3_Terraheim_AddNewSets_AddLeatherArmor",
+		    "ArmorTrollLeatherChestT3_Terraheim_AddNewSets_AddTrollLeatherArmor",
+		    "ArmorBronzeChestT3_Terraheim_AddNewSets_AddBronzeArmor",
+		    "ArmorIronChestT4_Terraheim_AddNewSets_AddIronArmor",
+		    "ArmorBronzeChestT4_Terraheim_AddNewSets_AddBronzeArmor",
+		    "ArmorTrollLeatherChestT4_Terraheim_AddNewSets_AddTrollLeatherArmor",
+		    "ArmorLeatherChestT4_Terraheim_AddNewSets_AddLeatherArmor",
+		    "ArmorIronChestT5_Terraheim_AddNewSets_AddIronArmor",
+		    "ArmorWolfChestT5_Terraheim_AddNewSets_AddSilverArmor",
+		    "ArmorBronzeChestT5_Terraheim_AddNewSets_AddBronzeArmor",
+		    "ArmorTrollLeatherChestT5_Terraheim_AddNewSets_AddTrollLeatherArmor",
+		    "ArmorLeatherChestT5_Terraheim_AddNewSets_AddLeatherArmor"
+	    ]
     },
     {
       "Type": "LegsArmor",
-      "Fallback": "",
-      "Items": [ "ArmorRagsLegs", "ArmorLeatherLegs", "ArmorTrollLeatherLegs", "ArmorBronzeLegs", "ArmorIronLegs", "ArmorWolfLegs", "ArmorPaddedGreaves" ]
+      "Fallback": "ArmorRagsLegs",
+      "Items": [ 
+		    "ArmorRagsLegs", 
+		    "ArmorLeatherLegs", 
+		    "ArmorTrollLeatherLegs", 
+		    "ArmorBronzeLegs", 
+		    "ArmorIronLegs", 
+		    "ArmorWolfLegs", 
+		    "ArmorPaddedGreaves",
+		    "ArmorLeatherLegsT1_Terraheim_AddNewSets_AddLeatherArmor",
+		    "ArmorLeatherLegsT2_Terraheim_AddNewSets_AddLeatherArmor",
+		    "ArmorTrollLeatherLegsT2_Terraheim_AddNewSets_AddTrollLeatherArmor",
+		    "ArmorLeatherLegsT3_Terraheim_AddNewSets_AddLeatherArmor",
+		    "ArmorTrollLeatherLegsT3_Terraheim_AddNewSets_AddTrollLeatherArmor",
+		    "ArmorBronzeLegsT3_Terraheim_AddNewSets_AddBronzeArmor",
+		    "ArmorLeatherLegsT4_Terraheim_AddNewSets_AddLeatherArmor",
+		    "ArmorTrollLeatherLegsT4_Terraheim_AddNewSets_AddTrollLeatherArmor",
+		    "ArmorBronzeLegsT4_Terraheim_AddNewSets_AddBronzeArmor",
+		    "ArmorIronLegsT4_Terraheim_AddNewSets_AddIronArmor",
+		    "ArmorLeatherLegsT5_Terraheim_AddNewSets_AddLeatherArmor",
+		    "ArmorTrollLeatherLegsT5_Terraheim_AddNewSets_AddTrollLeatherArmor",
+		    "ArmorBronzeLegsT5_Terraheim_AddNewSets_AddBronzeArmor",
+		    "ArmorIronLegsT5_Terraheim_AddNewSets_AddIronArmor",
+		    "ArmorWolfLegsT5_Terraheim_AddNewSets_AddSilverArmor"
+	    ]
     },
     {
       "Type": "HeadArmor",
       "Fallback": "ArmorRagsChest",
-      "Items": [ "HelmetLeather", "HelmetTrollLeather", "HelmetBronze", "HelmetIron", "HelmetDrake", "HelmetPadded" ]
+      "Items": [ 
+		    "HelmetLeather", 
+		    "HelmetTrollLeather", 
+		    "HelmetBronze", 
+		    "HelmetIron", 
+		    "HelmetDrake", 
+		    "HelmetPadded",
+		    "HelmetLeatherT1_Terraheim_AddNewSets_AddLeatherArmor", 
+		    "HelmetLeatherT2_Terraheim_AddNewSets_AddLeatherArmor",
+		    "HelmetTrollLeatherT2_Terraheim_AddNewSets_AddTrollLeatherArmor",
+		    "HelmetLeatherT3_Terraheim_AddNewSets_AddLeatherArmor",
+		    "HelmetTrollLeatherT3_Terraheim_AddNewSets_AddTrollLeatherArmor",
+		    "HelmetBronzeT3_Terraheim_AddNewSets_AddBronzeArmor",
+		    "HelmetLeatherT4_Terraheim_AddNewSets_AddLeatherArmor",
+		    "HelmetTrollLeatherT4_Terraheim_AddNewSets_AddTrollLeatherArmor",
+		    "HelmetBronzeT4_Terraheim_AddNewSets_AddBronzeArmor",
+		    "HelmetIronT4_Terraheim_AddNewSets_AddIronArmor",	
+		    "HelmetLeatherT5_Terraheim_AddNewSets_AddLeatherArmor",
+		    "HelmetTrollLeatherT5_Terraheim_AddNewSets_AddTrollLeatherArmor",
+		    "HelmetBronzeT5_Terraheim_AddNewSets_AddBronzeArmor",
+		    "HelmetIronT5_Terraheim_AddNewSets_AddIronArmor",
+		    "HelmetDrakeT5_Terraheim_AddNewSets_AddSilverArmor",
+        "HelmetWoodsman"
+	    ]
     },
     {
       "Type": "ShouldersArmor",
@@ -92,8 +166,16 @@
     },
     {
       "Type": "Utility",
-      "Fallback": "",
-      "Items": [ ]
+      "Fallback": "Club",
+      "Items": [ 
+        "LeatherBelt",
+        "SilverRing",
+        "GoldRubyRing",
+        "BeltMiner",
+        "BeltFarmer",
+        "BeltThief",
+        "BeltWaterproof"
+      ]
     }
   ]
 }

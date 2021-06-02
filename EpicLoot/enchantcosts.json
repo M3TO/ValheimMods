@@ -169,8 +169,8 @@
       "ItemTypes" : [ "OneHandedWeapon", "Bow", "TwoHandedWeapon", "Torch", "Tool", "Shield", "Helmet", "Chest", "Legs", "Shoulder", "Utility" ],
       "Rarity": "Legendary",
       "Cost": [
-        { "Item": "ShardLegendary",   "Amount": 1 },
-        { "Item": "DustLegendary",    "Amount": 1 }
+        { "Item": "ShardLegendary",   "Amount": 2 },
+        { "Item": "DustLegendary",    "Amount": 2 }
       ]
     }
   ],
