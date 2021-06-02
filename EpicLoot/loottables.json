@@ -74,12 +74,6 @@
       ]
     },
     {
-      "Name": "Tier5ToolsTH",
-      "Loot": [
-        { "Item": "PickaxeBlackmetal" }
-      ]
-    },
-    {
       "Name": "Tier6WeaponsTH",
       "Loot": [
         { "Item": "SwordFireTH" },
@@ -184,7 +178,11 @@
     },
     {
       "Name": "Tier1Tools",
-      "Loot": [ { "Item": "PickaxeAntler" } ]
+      "Loot": [ 
+        { "Item": "PickaxeAntler" },
+        { "Item": "Hammer" },
+        { "Item": "Hoe" }
+      ]
     },
     {
       "Name": "Tier1Gear",
@@ -248,7 +246,9 @@
       "Name": "Tier2Tools",
       "Loot": [
         { "Item": "PickaxeBronze" },
-        { "Item": "Cultivator" }
+        { "Item": "Cultivator" },
+        { "Item": "Hammer" },
+        { "Item": "Hoe" }
       ]
     },
     {
@@ -306,7 +306,13 @@
     },
     {
       "Name": "Tier3Tools",
-      "Loot": [ { "Item": "PickaxeIron" } ]
+      "Loot": [ 
+        { "Item": "PickaxeIron" },
+        { "Item": "Cultivator" },
+        { "Item": "Hammer" },
+        { "Item": "Hoe" }
+
+      ]
     },
     {
       "Name": "Tier3Gear",
@@ -366,7 +372,9 @@
       "Loot": [
         { "Item": "Tier4Weapons", "Weight": 4 },
         { "Item": "Tier4Armor",   "Weight": 4 },
-        { "Item": "Tier4Shields", "Weight": 2 }
+        { "Item": "Tier4Shields", "Weight": 1 },
+        { "Item": "Tier3Tools",   "Weight": 1 }
+
       ]
     },
     {
@@ -419,7 +427,10 @@
     {
       "Name": "Tier5Tools",
       "Loot": [
-        { "Item": "Tier5ToolsTH" }
+        { "Item": "PickaxeBlackmetal" },
+        { "Item": "Cultivator" },
+        { "Item": "Hammer" },
+        { "Item": "Hoe" }
       ]
     },
     {
