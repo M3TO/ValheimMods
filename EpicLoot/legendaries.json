@@ -145,8 +145,8 @@
         "AllowedSkillTypes": [ "Axes" ]
       },
       "GuaranteedMagicEffects": [
-        { "Type": "ModifyPhysicalDamage", "Values": { "MinValue": 15, "MaxValue": 20, "Increment": 1 } },
-        { "Type": "AddFrostDamage", "Values": { "MinValue": 30, "MaxValue": 35, "Increment": 1 } }
+        { "Type": "ModifyDamage", "Values": { "MinValue": 15, "MaxValue": 20, "Increment": 1 } },
+        { "Type": "AddFrostDamage", "Values": { "MinValue": 50, "MaxValue": 60, "Increment": 1 } }
       ]
     },
     {
