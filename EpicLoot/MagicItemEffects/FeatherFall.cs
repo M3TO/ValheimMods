@@ -17,7 +17,7 @@ namespace EpicLoot.MagicItemEffects
 				return;
 			}
 			
-			if (__instance is Player player && player.HasActiveMagicEffect(MagicEffectType.FeatherFall))
+			if (__instance is Player player && player.HasActiveMagicEffect(MagicEffectType.FeatherFall) && Enum.TryParse<KeyCode>("Space", out var startFloatingKey) && Input.GetKey(startFloatingKey))
 			{
 				___m_maxAirAltitude = Mathf.Min(3.99f + __instance.transform.position.y, ___m_maxAirAltitude);
 			}
@@ -35,10 +35,11 @@ namespace EpicLoot.MagicItemEffects
 		{
             var currentFeatherFallAura = __instance.transform.Find(FeatherFallEffectName);
 
-			if (!__instance.IsOnGround() && __instance.HasActiveMagicEffect(MagicEffectType.FeatherFall) && __instance.m_body)
+            if (!__instance.IsOnGround() && __instance.HasActiveMagicEffect(MagicEffectType.FeatherFall) && __instance.m_body 
+                && Enum.TryParse<KeyCode>("Space", out var startFloatingKey) && Input.GetKey(startFloatingKey))
 			{
-				var velocity = __instance.m_body.velocity;
-
+                var velocity = __instance.m_body.velocity;
+                
                 if (velocity.y <= MaxFallSpeed + float.Epsilon * 10)
                 {
                     if (currentFeatherFallAura != null && currentFeatherFallAura.GetComponent<ParticleSystem>().isStopped)
@@ -61,7 +62,8 @@ namespace EpicLoot.MagicItemEffects
 				__instance.m_body.velocity = velocity;
 			}
 
-            if (__instance.IsOnGround() && currentFeatherFallAura != null)
+            if ((__instance.IsOnGround() || (Enum.TryParse<KeyCode>("Space", out var stopFloatingKey) && !Input.GetKey(stopFloatingKey))) 
+                && currentFeatherFallAura != null)
             {
                 currentFeatherFallAura.GetComponent<ParticleSystem>().Stop();
                 currentFeatherFallAura.GetComponent<AudioSource>().Stop();

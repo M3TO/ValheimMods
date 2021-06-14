@@ -52,6 +52,8 @@
           "ModifyElementalDamage"
         ],
         "AllowedRarities": [
+          "Rare",
+          "Epic",
           "Legendary"
         ]
       },
@@ -259,7 +261,6 @@
           "Tool",
           "Helmet",
           "Chest",
-          "Legs",
           "Shoulder"
         ],
         "ItemHasNegativeMovementSpeedModifier" : true
@@ -367,6 +368,7 @@
       "Description" : "$mod_epicloot_me_modifybackstab_desc",
       "Requirements" : {
         "AllowedSkillTypes" : [
+          "Spears",
           "Knives",
           "Bows"
         ],
@@ -404,7 +406,7 @@
         "Magic" : { "MinValue" : 5, "MaxValue" : 15, "Increment" : 5 },
         "Rare" : { "MinValue" : 15, "MaxValue" : 25, "Increment" : 5 },
         "Epic" : { "MinValue" : 25, "MaxValue" : 35, "Increment" : 5 },
-        "Legendary" : { "MinValue" : 35, "MaxValue" : 60, "Increment" : 5 }
+        "Legendary" : { "MinValue" : 35, "MaxValue" : 50, "Increment" : 5 }
       },
       "SelectionWeight" : 1,
       "Prefixes": [
@@ -432,7 +434,7 @@
         "Magic" : { "MinValue" : 5, "MaxValue" : 15, "Increment" : 5 },
         "Rare" : { "MinValue" : 15, "MaxValue" : 25, "Increment" : 5 },
         "Epic" : { "MinValue" : 25, "MaxValue" : 35, "Increment" : 5 },
-        "Legendary" : { "MinValue" : 35, "MaxValue" : 60, "Increment" : 5 }
+        "Legendary" : { "MinValue" : 35, "MaxValue" : 50, "Increment" : 5 }
       },
       "SelectionWeight" : 1,
       "Prefixes": [
@@ -869,6 +871,11 @@
         "AllowedItemTypes" : [
           "Helmet",
           "Chest"
+        ],
+        "ExcludedItemNames":  [
+          "item_chest_wolf",
+          "item_cape_wolf",
+          "item_cape_lox"
         ],
         "ExclusiveEffectTypes" : [
           "AddFireResistance",
@@ -1583,8 +1590,7 @@
       "Requirements" : {
         "AllowedItemTypes" : [
           "OneHandedWeapon",
-          "TwoHandedWeapon",
-          "Bow"
+          "TwoHandedWeapon"
         ],
         "ExcludedSkillTypes": [
           "Pickaxes"
