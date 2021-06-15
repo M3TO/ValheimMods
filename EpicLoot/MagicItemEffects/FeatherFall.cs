@@ -28,7 +28,7 @@ namespace EpicLoot.MagicItemEffects
 	public class FeatherFallReduceFallSpeed_Player_FixedUpdate_Patch
     {
         public const string FeatherFallEffectName = "FeatherFallAura";
-        public const float MaxFallSpeed = -6;
+        public const float MaxFallSpeed = -5;
 
 		[UsedImplicitly]
 		private static void Postfix(Player __instance)
