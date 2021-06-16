@@ -3,10 +3,10 @@
   // MAGIC EFFECT COUNTS
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   "MagicEffectsCount": {
-    "Magic":     [ [2, 80], [3, 15], [4, 5] ],
-    "Rare":      [ [3, 70], [4, 20], [5, 10] ],
-    "Epic":      [ [4, 60], [5, 25], [6, 15] ],
-    "Legendary": [ [4, 40], [5, 35], [6, 25] ]
+    "Magic":     [ [2, 60], [3, 35], [4, 5] ],
+    "Rare":      [ [3, 50], [4, 40], [5, 10] ],
+    "Epic":      [ [4, 40], [5, 40], [6, 20] ],
+    "Legendary": [ [4, 30], [5, 35], [6, 35] ]
   },
 
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -28,77 +28,12 @@
   // ITEM SETS
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   "ItemSets": [
-
-    // Terraheim
-    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    //{
-    //  "Name": "Tier1WeaponsTH",
-    //  "Loot": [
-    //    { "Item": "JavelinFlint" },
-    //    { "Item": "GreataxeFlintTH" }
-    //  ]
-    //},
-    {
-      "Name": "Tier2WeaponsTH",
-      "Loot": [
-        { "Item": "BattleaxeBronzeTerraheim" }
-      ]
-    },
-    {
-      "Name": "Tier3WeaponsTH",
-      "Loot": [
-        { "Item": "GreatswordIron" },
-        { "Item": "KnifeIron" },
-        { "Item": "GreatswordChitinTH" }
-      ]
-    },
-    {
-      "Name": "Tier4WeaponsTH",
-      "Loot": [
-        { "Item": "AtgeirSilver" },
-        { "Item": "SwordFolcbrand" },
-        { "Item": "AxeForstasca" },
-        { "Item": "BattleaxeSilver" },
-        //{ "Item": "ShieldSilverDagger"}
-        { "Item": "KnifeSilverTH"}
-      ]
-    },
-    {
-      "Name": "Tier5WeaponsTH",
-      "Loot": [
-        { "Item": "GreatswordBlackmetal" },
-        { "Item": "SpearBlackmetal" },
-        { "Item": "BattleaxeBlackmetal" },
-        { "Item": "GreataxeBlackmetal" },
-        { "Item": "BowBlackmetalTH" }
-      ]
-    },
-    {
-      "Name": "Tier6WeaponsTH",
-      "Loot": [
-        { "Item": "SwordFireTH" },
-        { "Item": "MaceFireTH" },
-        { "Item": "KnifeFireTH" },
-        { "Item": "GreatswordFireTH" },
-        { "Item": "SledgeFireTH" },
-        { "Item": "AtgeirFireTH" },
-        { "Item": "SpearFireTH" },
-        { "Item": "BattleaxeFireTH" },
-        { "Item": "BowFireTH" },
-        { "Item": "AxeFireTH" }
-
-      ]
-    },
     {
       "Name": "ModUtility",
       "Loot": [
         { "Item": "LeatherBelt"  },
         { "Item": "SilverRing"   },
         { "Item": "GoldRubyRing" }
-        //{ "Item": "BeltMiner"  },
-        //{ "Item": "BeltFarmer"   },
-        //{ "Item": "BeltThief" },
-        //{ "Item": "BeltWaterproof"  }
       ]
     },
 
@@ -135,10 +70,10 @@
     {
       "Name": "Tier0Gear",
       "Loot": [
-        { "Item": "Tier0Weapons", "Weight": 5 },
-        { "Item": "Tier0Tools",   "Weight": 5 },
-        { "Item": "Tier0Armor",   "Weight": 1 },
-        { "Item": "Tier0Shields", "Weight": 1 }
+        { "Item": "Tier0Weapons", "Weight": 45 },
+        { "Item": "Tier0Armor",   "Weight": 45 },
+        { "Item": "Tier0Tools",   "Weight": 5 },        
+        { "Item": "Tier0Shields", "Weight": 5 }
       ]
     },
 
@@ -150,7 +85,8 @@
         { "Item": "AxeFlint" },
         { "Item": "SpearFlint" },
         { "Item": "KnifeFlint" },
-        { "Item": "Bow" }
+        { "Item": "Bow" },
+        { "Item": "SledgeStagbreaker" }
       ]
     },
     {
@@ -160,6 +96,12 @@
         { "Item": "ArmorLeatherChest" },
         { "Item": "HelmetLeather" },
         { "Item": "CapeDeerHide" }
+      ]
+    },
+    {
+      "Name": "Tier1Shields",
+      "Loot": [
+        { "Item": "ShieldWood" }
       ]
     },
     {
@@ -173,9 +115,10 @@
     {
       "Name": "Tier1Gear",
       "Loot": [
-        { "Item": "Tier1Weapons", "Weight": 40 },
-        { "Item": "Tier1Armor",   "Weight": 40 },
-        { "Item": "Tier1Tools",   "Weight": 20  }
+        { "Item": "Tier1Weapons", "Weight": 45 },
+        { "Item": "Tier1Armor",   "Weight": 45 },
+        { "Item": "Tier1Shields", "Weight": 5  },
+        { "Item": "Tier1Tools",   "Weight": 5  }
       ]
     },
 
@@ -185,7 +128,6 @@
       "Name": "Tier2Weapons",
       "Loot": [
         { "Item": "KnifeCopper" },
-        { "Item": "SledgeStagbreaker" },
         { "Item": "SwordBronze" },
         { "Item": "AxeBronze" },
         { "Item": "MaceBronze" },
@@ -194,7 +136,6 @@
         { "Item": "BowFineWood" },
         { "Item": "KnifeChitin" },
         { "Item": "SpearChitin" },
-        { "Item": "Tier2WeaponsTH" }
       ]
     },
     {
@@ -226,10 +167,10 @@
     {
       "Name": "Tier2Gear",
       "Loot": [
-        { "Item": "Tier2Weapons", "Weight": 4 },
-        { "Item": "Tier2Armor",   "Weight": 4 },
-        { "Item": "Tier2Shields", "Weight": 1 },
-        { "Item": "Tier2Tools",   "Weight": 1 }
+        { "Item": "Tier2Weapons", "Weight": 45 },
+        { "Item": "Tier2Armor",   "Weight": 45 },
+        { "Item": "Tier2Shields", "Weight": 5  },
+        { "Item": "Tier2Tools",   "Weight": 5  }
       ]
     },
 
@@ -244,8 +185,7 @@
         { "Item": "SledgeIron" },
         { "Item": "MaceIron" },
         { "Item": "AtgeirIron" },
-        { "Item": "SpearElderbark" },
-        { "Item": "Tier3WeaponsTH" }
+        { "Item": "SpearElderbark" }
       ]
     },
     {
@@ -275,10 +215,10 @@
     {
       "Name": "Tier3Gear",
       "Loot": [
-        { "Item": "Tier3Weapons", "Weight": 4 },
-        { "Item": "Tier3Armor",   "Weight": 4 },
-        { "Item": "Tier3Shields", "Weight": 1 },
-        { "Item": "Tier3Tools",   "Weight": 1 }
+        { "Item": "Tier3Weapons", "Weight": 45 },
+        { "Item": "Tier3Armor",   "Weight": 45 },
+        { "Item": "Tier3Shields", "Weight": 5  },
+        { "Item": "Tier3Tools",   "Weight": 5  }
       ]
     },
 
@@ -290,8 +230,7 @@
         { "Item": "SwordSilver" },
         { "Item": "SpearWolfFang" },
         { "Item": "MaceSilver" },
-        { "Item": "BowDraugrFang" },
-        { "Item": "Tier4WeaponsTH" }
+        { "Item": "BowDraugrFang" }
       ]
     },
     {
@@ -313,10 +252,10 @@
     {
       "Name": "Tier4Gear",
       "Loot": [
-        { "Item": "Tier4Weapons", "Weight": 4 },
-        { "Item": "Tier4Armor",   "Weight": 4 },
-        { "Item": "Tier4Shields", "Weight": 1 },
-        { "Item": "Tier3Tools",   "Weight": 1 }
+        { "Item": "Tier4Weapons", "Weight": 45 },
+        { "Item": "Tier4Armor",   "Weight": 45 },
+        { "Item": "Tier4Shields", "Weight": 5  },
+        { "Item": "Tier3Tools",   "Weight": 5  }
 
       ]
     },
@@ -329,8 +268,7 @@
         { "Item": "AtgeirBlackmetal" },
         { "Item": "AxeBlackMetal" },
         { "Item": "SwordBlackmetal" },
-        { "Item": "MaceNeedle" },
-        { "Item": "Tier5WeaponsTH" }
+        { "Item": "MaceNeedle" }
       ]
     },
     {
@@ -362,10 +300,10 @@
     {
       "Name": "Tier5Gear",
       "Loot": [
-        { "Item": "Tier5Weapons", "Weight": 4 },
-        { "Item": "Tier5Armor",   "Weight": 4 },
-        { "Item": "Tier5Shields", "Weight": 1 },
-        { "Item": "Tier5Tools",   "Weight": 1 }
+        { "Item": "Tier5Weapons", "Weight": 45 },
+        { "Item": "Tier5Armor",   "Weight": 45 },
+        { "Item": "Tier5Shields", "Weight": 5  },
+        { "Item": "Tier5Tools",   "Weight": 5  }
       ]
     }
   ],
@@ -384,8 +322,8 @@
           "Level": 1,
           "Drops": [ [ 0, 99 ], [ 1, 1 ] ],
           "Loot": [
-            { "Item": "Tier0Gear", "Weight": 50, "Rarity": [ 99, 1, 0, 0 ] },
-            { "Item": "DustMagic", "Weight": 49 },
+            { "Item": "Tier0Gear", "Weight": 20, "Rarity": [ 99, 1, 0, 0 ] },
+            { "Item": "DustMagic", "Weight": 79 },
             { "Item": "DustRare",  "Weight": 1  }
           ]
         },
@@ -393,8 +331,8 @@
           "Level": 2,
           "Drops": [ [ 0, 95 ], [ 1, 5 ] ],
           "Loot": [
-            { "Item": "Tier0Gear", "Weight": 50,  "Rarity": [ 95, 5, 0, 0 ] }, 
-            { "Item": "DustMagic", "Weight": 46 },
+            { "Item": "Tier0Gear", "Weight": 20,  "Rarity": [ 95, 5, 0, 0 ] }, 
+            { "Item": "DustMagic", "Weight": 76 },
             { "Item": "DustRare",  "Weight": 4  }
           ]
         },
@@ -402,8 +340,8 @@
           "Level": 3,
           "Drops": [ [ 0, 90 ], [ 1, 10 ] ],
           "Loot": [
-            { "Item": "Tier0Gear", "Weight": 50, "Rarity": [ 85, 15, 0, 0 ] }, 
-            { "Item": "DustMagic", "Weight": 38 },
+            { "Item": "Tier0Gear", "Weight": 20, "Rarity": [ 85, 15, 0, 0 ] }, 
+            { "Item": "DustMagic", "Weight": 68 },
             { "Item": "DustRare",  "Weight": 12 }
           ]
         },
@@ -498,9 +436,9 @@
           "Level": 1,
           "Drops": [ [ 0, 95 ], [ 1, 5 ] ],
           "Loot": [
-            { "Item": "Tier0Gear",  "Weight": 38, "Rarity": [ 90, 10, 0, 0 ] },
+            { "Item": "Tier0Gear",  "Weight": 18, "Rarity": [ 90, 10, 0, 0 ] },
             { "Item": "Tier1Gear",  "Weight": 2,  "Rarity": [ 90, 10, 0, 0 ] },
-            { "Item": "DustMagic",  "Weight": 52 },
+            { "Item": "DustMagic",  "Weight": 72 },
             { "Item": "DustRare",   "Weight": 8  }
           ]
         },
@@ -508,9 +446,9 @@
           "Level": 2,
           "Drops": [ [ 0, 90 ], [ 1, 10 ] ],
           "Loot": [
-            { "Item": "Tier0Gear",  "Weight": 36, "Rarity": [ 85, 14, 1, 0 ] },
+            { "Item": "Tier0Gear",  "Weight": 16, "Rarity": [ 85, 14, 1, 0 ] },
             { "Item": "Tier1Gear",  "Weight": 4,  "Rarity": [ 85, 14, 1, 0 ] },
-            { "Item": "DustMagic",  "Weight": 40 },
+            { "Item": "DustMagic",  "Weight": 60 },
             { "Item": "DustRare",   "Weight": 18 },
             { "Item": "DustEpic",   "Weight": 2  }
           ]
@@ -519,9 +457,9 @@
           "Level": 3,
           "Drops": [ [ 0, 85 ], [ 1, 15 ] ],
           "Loot": [
-            { "Item": "Tier0Gear",      "Weight": 33, "Rarity": [ 75, 22, 3, 0 ] },
+            { "Item": "Tier0Gear",      "Weight": 13, "Rarity": [ 75, 22, 3, 0 ] },
             { "Item": "Tier1Gear",      "Weight": 7,  "Rarity": [ 75, 22, 3, 0 ] },
-            { "Item": "DustMagic",      "Weight": 30 },
+            { "Item": "DustMagic",      "Weight": 51 },
             { "Item": "DustRare",       "Weight": 27 },
             { "Item": "DustEpic",       "Weight": 2  }
           ]
@@ -742,7 +680,7 @@
         }
       ]
     },
-    // Tier 3 Mobs (Troll, Ghost, Leech, Blob, Draugr)
+    // Tier 3 Mobs (Troll, Ghost, Leech, Blob, Draugr, Draugr Archer)
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     {
       "Object": "Tier3Mob",
@@ -1197,71 +1135,7 @@
         }
       ]
     },
-
-    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    // Supplemental Mobs
-    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-    {
-      "Object": "RRRN_Skogarmaor",
-      "RefObject": "Tier1Mob"
-    },
-    {
-      "Object": "RRRM_BrownWolf",
-      "RefObject": "Tier1Mob"
-    },
-    {
-      "Object": "RRRN_SkogarmaorRaider",
-      "RefObject": "Tier2Mob"
-    },
-    {
-      "Object": "RRRM_GreydwarfWarlock",
-      "RefObject": "Tier2Mob"
-    },
-    {
-      "Object": "RRR_GDThornweaver",
-      "RefObject": "Tier2Mob"
-    },
-    {
-      "Object": "RRR_GhostVengeful",
-      "RefObject": "Tier3Mob"
-    },
-    {
-      "Object": "RRRM_TrollTosser",
-      "RefObject": "Tier3Mob"
-    },
-    {
-      "Object": "RRRN_SkogarmaorCursed",
-      "RefObject": "Tier3Mob"
-    },
-    {
-      "Object": "RRRN_SkogarmaorSorceror",
-      "RefObject": "Tier4Mob"
-    },
-    {
-      "Object": "RRRM_FrozenBones",
-      "RefObject": "Tier4Mob"
-    },
-    {
-      "Object": "RRRN_RottenShambler",
-      "RefObject": "Tier4Mob"
-    },
-    {
-      "Object": "RRRN_DraugrDeathlord",
-      "RefObject": "Tier4Mob"
-    },
-    {
-      "Object": "RRRN_SkogarmaorSeer",
-      "RefObject": "Tier5Mob"
-    },
-    {
-      "Object": "RRRN_SkogarmaorWarlord",
-      "RefObject": "Tier5Mob"
-    },
-    {
-      "Object": "RRRM_GoblinGolem",
-      "RefObject": "Tier6Mob"
-    },
+    
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // Tier 0 Mobs (Greyling, Deer, Boar, Neck)
@@ -1293,7 +1167,7 @@
     },
     
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    // Tier 1 Mobs (Greydwarf, Skeleton)
+    // Tier 1 Mobs (Greydwarf, Skeleton, RRRM_Wolf, RRRN_Skogarmaor)
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     // Greydwarf
@@ -1308,9 +1182,22 @@
       "Object": "Skeleton",
       "RefObject": "Tier1Mob"
     },
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // Tier 2 Supplemental Mobs (RRRN_Skogarmaor, RRRM_BrownWolf)
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+      "Object": "RRRN_Skogarmaor",
+      "RefObject": "Tier1Mob"
+    },
+    {
+      "Object": "RRRM_BrownWolf",
+      "RefObject": "Tier1Mob"
+    },
     
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    // Tier 2 Mobs (Greydwarf Brute, Greydwarf Shaman, Rancid Remains)
+    // Tier 2 Vanilla Mobs (Greydwarf Brute, Greydwarf Shaman, Rancid Remains)
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     // Greydwarf Brute (Greydwarf_Elite)
@@ -1331,9 +1218,26 @@
       "Object": "Skeleton_Poison",
       "RefObject": "Tier2Mob"
     },
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // Tier 2 Supplemental Mobs (RRRN_SkogarmaorRaider, RRRM_GreydwarfWarlock, RRR_GDThornweaver)
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+      "Object": "RRRN_SkogarmaorRaider",
+      "RefObject": "Tier2Mob"
+    },
+    {
+      "Object": "RRRM_GreydwarfWarlock",
+      "RefObject": "Tier2Mob"
+    },
+    {
+      "Object": "RRR_GDThornweaver",
+      "RefObject": "Tier2Mob"
+    },    
     
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    // Tier 3 Mobs (Troll, Ghost, Leech, Blob, Draugr, Draugr Archer, Surtling)
+    // Tier 3 Vanilla Mobs (Troll, Ghost, Leech, Blob, Draugr, Draugr Archer, Surtling)
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     // Troll
@@ -1380,6 +1284,23 @@
     },
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // Tier 3 Supplemental Mobs (RRR_GhostVengeful, RRRM_TrollTosser, RRRN_SkogarmaorCursed)
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+      "Object": "RRR_GhostVengeful",
+      "RefObject": "Tier3Mob"
+    },
+    {
+      "Object": "RRRM_TrollTosser",
+      "RefObject": "Tier3Mob"
+    },
+    {
+      "Object": "RRRN_SkogarmaorCursed",
+      "RefObject": "Tier3Mob"
+    },
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // Tier 4 Mobs (Draugr Elite, Oozer, Wraith, Wolf, Drake)
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -1415,7 +1336,28 @@
     },
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    //Begin Tier 5 Mobs (Stone Golem, Fenring, Serpent, Goblin, Goblin Archer Deathsquito, Lox)
+    // Tier Supplemental 4 Mobs (RRRN_SkogarmaorSorceror, RRRM_FrozenBones, RRRN_RottenShambler, RRRN_DraugrDeathlord)
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+      "Object": "RRRN_SkogarmaorSorceror",
+      "RefObject": "Tier4Mob"
+    },
+    {
+      "Object": "RRRM_FrozenBones",
+      "RefObject": "Tier4Mob"
+    },
+    {
+      "Object": "RRRN_RottenShambler",
+      "RefObject": "Tier4Mob"
+    },
+    {
+      "Object": "RRRN_DraugrDeathlord",
+      "RefObject": "Tier4Mob"
+    },
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //Tier 5 Vanilla Mobs (Stone Golem, Fenring, Serpent, Goblin, Goblin Archer, Deathsquito, Lox)
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     // Stone Golem (StoneGolem)
@@ -1460,6 +1402,20 @@
       "Object": "GoblinArcher",
       "RefObject": "Tier5Mob"
     },
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // Tier 5 Supplemental Mobs (RRRN_SkogarmaorSeer, RRRN_SkogarmaorWarlord)
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+      "Object": "RRRN_SkogarmaorSeer",
+      "RefObject": "Tier5Mob"
+    },
+    {
+      "Object": "RRRN_SkogarmaorWarlord",
+      "RefObject": "Tier5Mob"
+    },
+
     
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // Tier 6 Mobs (Fuling Berserker, Fuling Shaman)
@@ -1475,6 +1431,15 @@
     ////////////////////////////////////////////////////////////////////////////////////
     {
       "Object": "GoblinShaman",
+      "RefObject": "Tier6Mob"
+    },
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // Tier 6 Supplemental Mobs (RRRM_GoblinGolem)
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    {
+      "Object": "RRRM_GoblinGolem",
       "RefObject": "Tier6Mob"
     },
 
@@ -1890,66 +1855,6 @@
       ]
     },
 
-    // Kobold Kollector
-    ////////////////////////////////////////////////////////////////////////////////////
-    {
-      "Object": "RRRM_KoboldKollector",
-      "LeveledLoot": [
-        {
-          "Level": 1,
-          "Drops": [ [5, 16], [6, 16], [7, 16], [8, 16], [9, 16], [10, 16], [11, 4 ] ],
-          "Loot": [
-            { "Item": "Tier0Mats", "Weight": 90 },
-            { "Item": "Tier1Mats", "Weight": 10 }
-          ]
-        },
-        {
-          "Level": 2,
-          "Drops": [ [5, 16], [6, 16], [7, 16], [8, 16], [9, 16], [10, 16], [11, 4 ] ],
-          "Loot": [
-            { "Item": "Tier0Mats", "Weight": 60 },
-            { "Item": "Tier1Mats", "Weight": 30 },
-            { "Item": "Tier2Mats", "Weight": 10 }
-          ]
-        },
-        {
-          "Level": 3,
-          "Drops": [ [5, 16], [6, 16], [7, 16], [8, 16], [9, 16], [10, 16], [11, 4 ] ],
-          "Loot": [
-            { "Item": "Tier1Mats", "Weight": 60 },
-            { "Item": "Tier2Mats", "Weight": 30 },
-            { "Item": "Tier3Mats", "Weight": 10 }
-          ]
-        },
-        {
-          "Level": 4,
-          "Drops": [ [5, 16], [6, 16], [7, 16], [8, 16], [9, 16], [10, 16], [11, 4 ] ],
-          "Loot": [
-            { "Item": "Tier2Mats", "Weight": 60 },
-            { "Item": "Tier3Mats", "Weight": 30 },
-            { "Item": "Tier4Mats", "Weight": 10 }
-          ]
-        },
-        {
-          "Level": 5,
-          "Drops": [ [5, 16], [6, 16], [7, 16], [8, 16], [9, 16], [10, 16], [11, 4 ] ],
-          "Loot": [
-            { "Item": "Tier3Mats", "Weight": 60 },
-            { "Item": "Tier4Mats", "Weight": 30 },
-            { "Item": "Tier5Mats", "Weight": 10 }
-          ]
-        },
-        {
-          "Level": 6,
-          "Drops": [ [5, 16], [6, 16], [7, 16], [8, 16], [9, 16], [10, 16], [11, 4 ] ],
-          "Loot": [
-            { "Item": "Tier4Mats", "Weight": 60 },
-            { "Item": "Tier5Mats", "Weight": 40 }
-          ]
-        }
-      ]
-    },
-
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // BOSSES
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1963,9 +1868,7 @@
           "Level": 1,
           "Drops": [ [1, 70], [2, 30], [4, 0] ],
           "Loot": [
-            { "Item": "Tier1Gear",          "Weight": 8, "Rarity": [ 77, 20, 2, 1 ] },
-            { "Item": "Tier0Shields",       "Weight": 1, "Rarity": [ 77, 20, 2, 1 ] },
-            { "Item": "SledgeStagbreaker",  "Weight": 1, "Rarity": [ 77, 20, 2, 1 ] }
+            { "Item": "Tier1Gear",  "Weight": 1, "Rarity": [ 77, 20, 2, 1 ] }
           ]
         },
         {
