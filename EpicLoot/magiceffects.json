@@ -52,6 +52,7 @@
           "ModifyElementalDamage"
         ],
         "AllowedRarities": [
+          "Magic",
           "Rare",
           "Epic",
           "Legendary"
@@ -86,13 +87,14 @@
         ],
         "ItemHasPhysicalDamage": true,
         "AllowedRarities": [
+          "Magic",
           "Rare",
           "Epic",
           "Legendary"
         ]
       },
       "ValuesPerRarity" : {
-        //"Magic" : { "MinValue" : 5, "MaxValue" : 15, "Increment" : 1 },
+        "Magic" : { "MinValue" : 5, "MaxValue" : 15, "Increment" : 1 },
         "Rare" : { "MinValue" : 15, "MaxValue" : 25, "Increment" : 1 },
         "Epic" : { "MinValue" : 25, "MaxValue" : 35, "Increment" : 1 },
         "Legendary" : { "MinValue" : 35, "MaxValue" : 50, "Increment" : 1 }

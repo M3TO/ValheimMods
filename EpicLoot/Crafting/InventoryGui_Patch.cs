@@ -8,6 +8,11 @@ namespace EpicLoot.Crafting
     [HarmonyPatch(typeof(InventoryGui), nameof(InventoryGui.UpdateRecipe))]
     public static class InventoryGui_UpdateRecipe_Patch
     {
+        public static void Prefix(ref InventoryGui __instance)
+        {
+            __instance.m_craftDuration = 0.75f;
+        }
+
         public static void Postfix(InventoryGui __instance)
         {
             var recipeDesc = __instance.m_recipeDecription;
